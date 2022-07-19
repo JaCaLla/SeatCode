@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SeatCode
+
+  Created by Javier Calatrava on 19/7/22.
+  
+*/
+
+"trips_loading" = "Loading";

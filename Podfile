@@ -7,6 +7,9 @@ target 'SeatCode' do
 
   # Pods for resources
   pod 'R.swift', '~> 5.0.3'
+  
+  # Pods for UI
+  pod 'JGProgressHUD'
 
   target 'SeatCodeTests' do
     inherit! :search_paths

@@ -164,3 +164,37 @@ Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
 Pods/Target Support Files/R.swift.Library/R.swift.Library.debug.xcconfig
 Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
 Pods/Target Support Files/R.swift.Library/R.swift.Library.release.xcconfig
+Pods/JGProgressHUD/LICENSE.txt
+Pods/JGProgressHUD/README.md
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUD.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.m
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUD-Defines.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUD.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDAnimation.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDErrorIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeAnimation.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeZoomAnimation.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDImageIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDIndeterminateIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDPieIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDRingIndicatorView.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDShadow.h
+Pods/JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDSuccessIndicatorView.h
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD-dummy.m
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD-Info.plist
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD-umbrella.h
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD.debug.xcconfig
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD.modulemap
+Pods/Target Support Files/JGProgressHUD/JGProgressHUD.release.xcconfig

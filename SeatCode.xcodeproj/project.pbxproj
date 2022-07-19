@@ -14,10 +14,38 @@
 		5E72520A2886E7470003963E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7252082886E7470003963E /* Main.storyboard */; };
 		5E72520C2886E7480003963E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E72520B2886E7480003963E /* Assets.xcassets */; };
 		5E72520F2886E7480003963E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E72520D2886E7480003963E /* LaunchScreen.storyboard */; };
-		5E72521A2886E7480003963E /* SeatCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252192886E7480003963E /* SeatCodeTests.swift */; };
 		5E7252242886E7480003963E /* SeatCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252232886E7480003963E /* SeatCodeUITests.swift */; };
 		5E7252262886E7480003963E /* SeatCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252252886E7480003963E /* SeatCodeUITestsLaunchTests.swift */; };
 		5E72523F2886ED350003963E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72523E2886ED350003963E /* R.generated.swift */; };
+		5E7252432886EFA30003963E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252422886EFA30003963E /* APIManager.swift */; };
+		5E7252482886F1060003963E /* APIManagerUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252472886F1060003963E /* APIManagerUT.swift */; };
+		5E72524A2886F45A0003963E /* TripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252492886F45A0003963E /* TripAPI.swift */; };
+		5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72524F2886F9BE0003963E /* ConcurrentOperation.swift */; };
+		5E7252522886F9D70003963E /* PresentMainAppOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252512886F9D70003963E /* PresentMainAppOperation.swift */; };
+		5E7252542886F9F60003963E /* StartUpAppSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252532886F9F60003963E /* StartUpAppSequencer.swift */; };
+		5E7252572886FA390003963E /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252562886FA390003963E /* MainFlowCoordinator.swift */; };
+		5E72525F2886FC9E0003963E /* TripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72525E2886FC9E0003963E /* TripsVC.swift */; };
+		5E7252622886FD860003963E /* TripsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252612886FD860003963E /* TripsInteractor.swift */; };
+		5E7252642886FDE90003963E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252632886FDE90003963E /* DataManager.swift */; };
+		5E7252662886FF690003963E /* DataManagerUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252652886FF690003963E /* DataManagerUT.swift */; };
+		5E725269288701830003963E /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725268288701830003963E /* Trip.swift */; };
+		5E72526D28871CDF0003963E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72526C28871CDF0003963E /* App.swift */; };
+		5E72526F28871DF50003963E /* TripsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72526E28871DF50003963E /* TripsPresenter.swift */; };
+		5E72527428871EB80003963E /* TripsInteractorUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527328871EB80003963E /* TripsInteractorUT.swift */; };
+		5E72527628871F030003963E /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527528871F030003963E /* APIManagerMock.swift */; };
+		5E725278288723E80003963E /* TripsPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725277288723E80003963E /* TripsPresenterUT.swift */; };
+		5E72527A288724120003963E /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725279288724120003963E /* DataManagerMock.swift */; };
+		5E72527D2887252B0003963E /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527C2887252B0003963E /* TripList.swift */; };
+		5E72527F2887259B0003963E /* TripVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527E2887259B0003963E /* TripVM.swift */; };
+		5E725281288727030003963E /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725280288727030003963E /* TripListCell.swift */; };
+		5E725283288729BB0003963E /* OriginDestinationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725282288729BB0003963E /* OriginDestinationAPI.swift */; };
+		5E72528528872AFA0003963E /* OriginDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528428872AFA0003963E /* OriginDestination.swift */; };
+		5E72528728873D590003963E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E72528628873D590003963E /* Localizable.strings */; };
+		5E72528A28873DF50003963E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528928873DF50003963E /* StringExtension.swift */; };
+		5E72528C28874B3C0003963E /* TripPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528B28874B3C0003963E /* TripPresenterUT.swift */; };
+		5E72528E28874EA60003963E /* TripsVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528D28874EA60003963E /* TripsVCMock.swift */; };
+		5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528F28874ECF0003963E /* TripsInteractorMock.swift */; };
+		5E725292288753040003963E /* ErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725291288753040003963E /* ErrorAPI.swift */; };
 		65A4ABA6D5ACEF35801749B0 /* Pods_SeatCode_SeatCodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD42C56C88BAC4464029BC5 /* Pods_SeatCode_SeatCodeUITests.framework */; };
 		7AB2BAD20559CD11408899CB /* Pods_SeatCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01EB0E3FAF7F0A56FE80C82 /* Pods_SeatCodeTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,11 +79,39 @@
 		5E72520E2886E7480003963E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7252102886E7480003963E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7252152886E7480003963E /* SeatCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeatCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E7252192886E7480003963E /* SeatCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCodeTests.swift; sourceTree = "<group>"; };
 		5E72521F2886E7480003963E /* SeatCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeatCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7252232886E7480003963E /* SeatCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCodeUITests.swift; sourceTree = "<group>"; };
 		5E7252252886E7480003963E /* SeatCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E72523E2886ED350003963E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		5E7252422886EFA30003963E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5E7252472886F1060003963E /* APIManagerUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerUT.swift; sourceTree = "<group>"; };
+		5E7252492886F45A0003963E /* TripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAPI.swift; sourceTree = "<group>"; };
+		5E72524F2886F9BE0003963E /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		5E7252512886F9D70003963E /* PresentMainAppOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentMainAppOperation.swift; sourceTree = "<group>"; };
+		5E7252532886F9F60003963E /* StartUpAppSequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpAppSequencer.swift; sourceTree = "<group>"; };
+		5E7252562886FA390003963E /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		5E72525E2886FC9E0003963E /* TripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVC.swift; sourceTree = "<group>"; };
+		5E7252612886FD860003963E /* TripsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractor.swift; sourceTree = "<group>"; };
+		5E7252632886FDE90003963E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5E7252652886FF690003963E /* DataManagerUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerUT.swift; sourceTree = "<group>"; };
+		5E725268288701830003963E /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		5E72526C28871CDF0003963E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		5E72526E28871DF50003963E /* TripsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsPresenter.swift; sourceTree = "<group>"; };
+		5E72527328871EB80003963E /* TripsInteractorUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorUT.swift; sourceTree = "<group>"; };
+		5E72527528871F030003963E /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		5E725277288723E80003963E /* TripsPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsPresenterUT.swift; sourceTree = "<group>"; };
+		5E725279288724120003963E /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
+		5E72527C2887252B0003963E /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
+		5E72527E2887259B0003963E /* TripVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripVM.swift; sourceTree = "<group>"; };
+		5E725280288727030003963E /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
+		5E725282288729BB0003963E /* OriginDestinationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationAPI.swift; sourceTree = "<group>"; };
+		5E72528428872AFA0003963E /* OriginDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestination.swift; sourceTree = "<group>"; };
+		5E72528628873D590003963E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5E72528928873DF50003963E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5E72528B28874B3C0003963E /* TripPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPresenterUT.swift; sourceTree = "<group>"; };
+		5E72528D28874EA60003963E /* TripsVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCMock.swift; sourceTree = "<group>"; };
+		5E72528F28874ECF0003963E /* TripsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorMock.swift; sourceTree = "<group>"; };
+		5E725291288753040003963E /* ErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAPI.swift; sourceTree = "<group>"; };
 		6F44E05357E988D26AFDEE13 /* Pods-SeatCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode.release.xcconfig"; path = "Target Support Files/Pods-SeatCode/Pods-SeatCode.release.xcconfig"; sourceTree = "<group>"; };
 		7C8133BEF17686A05DA33527 /* Pods_SeatCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA48A034E49E7374780D2 /* Pods-SeatCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCodeTests.debug.xcconfig"; path = "Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,12 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				5E72523B2886ED350003963E /* ViewLayer */,
+				5E72524C2886F9790003963E /* DomainLayer */,
+				5E7252402886EF170003963E /* DataLayer */,
 				5E7252022886E7470003963E /* AppDelegate.swift */,
 				5E7252042886E7470003963E /* SceneDelegate.swift */,
 				5E7252062886E7470003963E /* ViewController.swift */,
-				5E7252082886E7470003963E /* Main.storyboard */,
-				5E72520B2886E7480003963E /* Assets.xcassets */,
-				5E72520D2886E7480003963E /* LaunchScreen.storyboard */,
 				5E7252102886E7480003963E /* Info.plist */,
 			);
 			path = SeatCode;
@@ -146,7 +201,8 @@
 		5E7252182886E7480003963E /* SeatCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E7252192886E7480003963E /* SeatCodeTests.swift */,
+				5E72527028871E8A0003963E /* ViewLayer */,
+				5E7252452886F0E80003963E /* DataLayer */,
 			);
 			path = SeatCodeTests;
 			sourceTree = "<group>";
@@ -163,7 +219,10 @@
 		5E72523B2886ED350003963E /* ViewLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5E7252582886FA970003963E /* Controllers */,
+				5E72528828873DE60003963E /* Extensions */,
 				5E72523C2886ED350003963E /* Resources */,
+				5E72524B2886F9290003963E /* Storyboards */,
 			);
 			path = ViewLayer;
 			sourceTree = "<group>";
@@ -171,6 +230,8 @@
 		5E72523C2886ED350003963E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E72520B2886E7480003963E /* Assets.xcassets */,
+				5E72528628873D590003963E /* Localizable.strings */,
 				5E72523D2886ED350003963E /* R.Swift */,
 			);
 			path = Resources;
@@ -182,6 +243,181 @@
 				5E72523E2886ED350003963E /* R.generated.swift */,
 			);
 			path = R.Swift;
+			sourceTree = "<group>";
+		};
+		5E7252402886EF170003963E /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252632886FDE90003963E /* DataManager.swift */,
+				5E725267288701760003963E /* Model */,
+				5E7252412886EF730003963E /* APIManager */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		5E7252412886EF730003963E /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252422886EFA30003963E /* APIManager.swift */,
+				5E725291288753040003963E /* ErrorAPI.swift */,
+				5E7252442886EFAA0003963E /* Model */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		5E7252442886EFAA0003963E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252492886F45A0003963E /* TripAPI.swift */,
+				5E725282288729BB0003963E /* OriginDestinationAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E7252452886F0E80003963E /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252652886FF690003963E /* DataManagerUT.swift */,
+				5E725279288724120003963E /* DataManagerMock.swift */,
+				5E7252462886F0F00003963E /* APIManager */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		5E7252462886F0F00003963E /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252472886F1060003963E /* APIManagerUT.swift */,
+				5E72527528871F030003963E /* APIManagerMock.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		5E72524B2886F9290003963E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252082886E7470003963E /* Main.storyboard */,
+				5E72520D2886E7480003963E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5E72524C2886F9790003963E /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E72526B28871CC90003963E /* App */,
+				5E7252552886FA170003963E /* Coordinator */,
+				5E72524D2886F98B0003963E /* Sequencer */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		5E72524D2886F98B0003963E /* Sequencer */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252532886F9F60003963E /* StartUpAppSequencer.swift */,
+				5E72524E2886F9A20003963E /* Operations */,
+			);
+			path = Sequencer;
+			sourceTree = "<group>";
+		};
+		5E72524E2886F9A20003963E /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5E72524F2886F9BE0003963E /* ConcurrentOperation.swift */,
+				5E7252512886F9D70003963E /* PresentMainAppOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5E7252552886FA170003963E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5E7252562886FA390003963E /* MainFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5E7252582886FA970003963E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E72525D2886FC1B0003963E /* Trips */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E72525D2886FC1B0003963E /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				5E72527B2887251E0003963E /* Views */,
+				5E72525E2886FC9E0003963E /* TripsVC.swift */,
+				5E72526E28871DF50003963E /* TripsPresenter.swift */,
+				5E7252612886FD860003963E /* TripsInteractor.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		5E725267288701760003963E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E725268288701830003963E /* Trip.swift */,
+				5E72528428872AFA0003963E /* OriginDestination.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E72526B28871CC90003963E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5E72526C28871CDF0003963E /* App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5E72527028871E8A0003963E /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E72527128871EA00003963E /* Controllers */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		5E72527128871EA00003963E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E72527228871EA70003963E /* Trips */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E72527228871EA70003963E /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				5E72528B28874B3C0003963E /* TripPresenterUT.swift */,
+				5E72528F28874ECF0003963E /* TripsInteractorMock.swift */,
+				5E72527328871EB80003963E /* TripsInteractorUT.swift */,
+				5E725277288723E80003963E /* TripsPresenterUT.swift */,
+				5E72528D28874EA60003963E /* TripsVCMock.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		5E72527B2887251E0003963E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E72527C2887252B0003963E /* TripList.swift */,
+				5E72527E2887259B0003963E /* TripVM.swift */,
+				5E725280288727030003963E /* TripListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5E72528828873DE60003963E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E72528928873DF50003963E /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8C15358BEB695A2F2F76A8EC /* Frameworks */ = {
@@ -305,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72520F2886E7480003963E /* LaunchScreen.storyboard in Resources */,
+				5E72528728873D590003963E /* Localizable.strings in Resources */,
 				5E72520C2886E7480003963E /* Assets.xcassets in Resources */,
 				5E72520A2886E7470003963E /* Main.storyboard in Resources */,
 			);
@@ -454,9 +691,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E72526F28871DF50003963E /* TripsPresenter.swift in Sources */,
+				5E7252542886F9F60003963E /* StartUpAppSequencer.swift in Sources */,
+				5E7252642886FDE90003963E /* DataManager.swift in Sources */,
+				5E725283288729BB0003963E /* OriginDestinationAPI.swift in Sources */,
+				5E7252522886F9D70003963E /* PresentMainAppOperation.swift in Sources */,
+				5E725281288727030003963E /* TripListCell.swift in Sources */,
+				5E72527D2887252B0003963E /* TripList.swift in Sources */,
+				5E72524A2886F45A0003963E /* TripAPI.swift in Sources */,
+				5E72527F2887259B0003963E /* TripVM.swift in Sources */,
+				5E725269288701830003963E /* Trip.swift in Sources */,
+				5E72525F2886FC9E0003963E /* TripsVC.swift in Sources */,
+				5E7252572886FA390003963E /* MainFlowCoordinator.swift in Sources */,
+				5E72526D28871CDF0003963E /* App.swift in Sources */,
 				5E7252072886E7470003963E /* ViewController.swift in Sources */,
 				5E7252032886E7470003963E /* AppDelegate.swift in Sources */,
+				5E7252622886FD860003963E /* TripsInteractor.swift in Sources */,
+				5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */,
+				5E7252432886EFA30003963E /* APIManager.swift in Sources */,
+				5E725292288753040003963E /* ErrorAPI.swift in Sources */,
+				5E72528A28873DF50003963E /* StringExtension.swift in Sources */,
 				5E7252052886E7470003963E /* SceneDelegate.swift in Sources */,
+				5E72528528872AFA0003963E /* OriginDestination.swift in Sources */,
 				5E72523F2886ED350003963E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +721,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E72521A2886E7480003963E /* SeatCodeTests.swift in Sources */,
+				5E72527428871EB80003963E /* TripsInteractorUT.swift in Sources */,
+				5E72528E28874EA60003963E /* TripsVCMock.swift in Sources */,
+				5E7252662886FF690003963E /* DataManagerUT.swift in Sources */,
+				5E72528C28874B3C0003963E /* TripPresenterUT.swift in Sources */,
+				5E72527628871F030003963E /* APIManagerMock.swift in Sources */,
+				5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */,
+				5E725278288723E80003963E /* TripsPresenterUT.swift in Sources */,
+				5E7252482886F1060003963E /* APIManagerUT.swift in Sources */,
+				5E72527A288724120003963E /* DataManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

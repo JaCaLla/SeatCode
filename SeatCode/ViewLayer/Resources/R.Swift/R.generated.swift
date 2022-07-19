@@ -31,6 +31,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `RouteListCell`.
+    static let routeListCell: Rswift.ReuseIdentifier<TripListCell> = Rswift.ReuseIdentifier(identifier: "RouteListCell")
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
@@ -46,6 +54,24 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    struct localizable {
+      /// Value: Loading
+      static let trips_loading = Rswift.StringResource(key: "trips_loading", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Loading
+      static func trips_loading(_: Void = ()) -> String {
+        return NSLocalizedString("trips_loading", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
     }
     
     fileprivate init() {}
@@ -90,14 +116,20 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
+      typealias InitialController = TripsVC
       
       let bundle = R.hostingBundle
       let name = "Main"
+      let tripsVC = StoryboardViewControllerResource<TripsVC>(identifier: "TripsVC")
+      
+      func tripsVC(_: Void = ()) -> TripsVC? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tripsVC)
+      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().tripsVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tripsVC' could not be loaded from storyboard 'Main' as 'TripsVC'.") }
       }
       
       fileprivate init() {}
