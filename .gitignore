@@ -88,3 +88,79 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Pods/Manifest.lock
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-acknowledgements.markdown
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-acknowledgements.plist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-dummy.m
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-Info.plist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-umbrella.h
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode.debug.xcconfig
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode.modulemap
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode.release.xcconfig
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-acknowledgements.plist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-dummy.m
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-Info.plist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-umbrella.h
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests.debug.xcconfig
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests.modulemap
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests.release.xcconfig
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests-acknowledgements.plist
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests-dummy.m
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests-Info.plist
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests-umbrella.h
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.debug.xcconfig
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.modulemap
+Pods/Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.release.xcconfig
+Pods/R.swift/License
+Pods/R.swift/rswift
+Pods/R.swift.Library/License
+Pods/R.swift.Library/Readme.md
+Pods/R.swift.Library/Library/Core/ColorResource.swift
+Pods/R.swift.Library/Library/Core/FileResource.swift
+Pods/R.swift.Library/Library/Core/FontResource.swift
+Pods/R.swift.Library/Library/Core/Identifier.swift
+Pods/R.swift.Library/Library/Core/ImageResource.swift
+Pods/R.swift.Library/Library/Core/NibResource.swift
+Pods/R.swift.Library/Library/Core/ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardResource.swift
+Pods/R.swift.Library/Library/Core/StoryboardSegueIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/Core/StringResource.swift
+Pods/R.swift.Library/Library/Core/Validatable.swift
+Pods/R.swift.Library/Library/Foundation/Bundle+FileResource.swift
+Pods/R.swift.Library/Library/Foundation/Data+FileResource.swift
+Pods/R.swift.Library/Library/UIKit/NibResource+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift
+Pods/R.swift.Library/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIColor+ColorResource.swift
+Pods/R.swift.Library/Library/UIKit/UIFont+FontResource.swift
+Pods/R.swift.Library/Library/UIKit/UIImage+ImageResource.swift
+Pods/R.swift.Library/Library/UIKit/UINib+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/UIKit/UITableView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode/Pods-SeatCode-frameworks.sh
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests-frameworks.sh
+Pods/Target Support Files/R.swift/R.swift.debug.xcconfig
+Pods/Target Support Files/R.swift/R.swift.release.xcconfig
+Pods/Target Support Files/R.swift.Library/R.swift.Library-dummy.m
+Pods/Target Support Files/R.swift.Library/R.swift.Library-Info.plist
+Pods/Target Support Files/R.swift.Library/R.swift.Library-prefix.pch
+Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
+Pods/Target Support Files/R.swift.Library/R.swift.Library.debug.xcconfig
+Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
+Pods/Target Support Files/R.swift.Library/R.swift.Library.release.xcconfig
