@@ -17,7 +17,7 @@ class TripListCell: UITableViewCell {
     // MARK: - Callbacks
 
     // MARK: - Private attributes
-    private var routeVM: TripVM?
+    private var tripVM: TripVM?
 
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -26,10 +26,10 @@ class TripListCell: UITableViewCell {
     }
 
     // MARK: - Public methods
-    func set(routeVM: TripVM) {
-        self.routeVM = routeVM
-        lblOriginDestination.text = routeVM.originDestination
-        lblStartEnd.text = routeVM.startEnd
-        lblDriverName.text = routeVM.driverName
+    func set(tripVM: TripVM) {
+        self.tripVM = tripVM
+        lblOriginDestination.text = tripVM.originDestination
+        lblStartEnd.text = tripVM.startEnd
+        lblDriverName.text = tripVM.driverName
     }
 }

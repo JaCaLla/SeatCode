@@ -49,7 +49,7 @@ class DataManagerUT: XCTestCase {
             XCTAssertEqual(trips[3].status, "scheduled")
             XCTAssertEqual(trips[3].origin.address.isEmpty, false)
             XCTAssertEqual(trips[3].origin.point.latitude > 0, true)
-            XCTAssertEqual(trips[3].route.isEmpty, false)
+            XCTAssertEqual(trips[3].polylineStr.isEmpty, false)
             XCTAssertNil(trips[3].stopPoints[0].id)
             XCTAssertEqual(trips[3].stopPoints[1].id, 9)
             XCTAssertEqual(trips[3].stopPoints[2].id, 10)

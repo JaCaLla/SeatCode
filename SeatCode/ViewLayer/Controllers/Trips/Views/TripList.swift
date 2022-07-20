@@ -45,7 +45,7 @@ extension TripList: UITableViewDataSource {
                 guard let tripListCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.routeListCell.identifier, for: indexPath) as? TripListCell else {
             return UITableViewCell()
         }
-        tripListCell.set(routeVM: self.tripsVM[indexPath.row])
+        tripListCell.set(tripVM: self.tripsVM[indexPath.row])
         return tripListCell
     }
 }

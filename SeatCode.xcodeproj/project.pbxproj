@@ -50,6 +50,10 @@
 		5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7ED2887F2A600CF8239 /* TripMap.swift */; };
 		5EDEC7F02887F54A00CF8239 /* StopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */; };
 		5EDEC7F22888122C00CF8239 /* TripsVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */; };
+		5EDEC7F4288834A900CF8239 /* PopUpAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F3288834A900CF8239 /* PopUpAnnotation.xib */; };
+		5EDEC7F62888352800CF8239 /* PopUpAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F52888352800CF8239 /* PopUpAnnotation.swift */; };
+		5EDEC7F9288849F400CF8239 /* StopPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F8288849F400CF8239 /* StopPinAnnotation.swift */; };
+		5EDEC7FB28884A7000CF8239 /* StopPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */; };
 		65A4ABA6D5ACEF35801749B0 /* Pods_SeatCode_SeatCodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD42C56C88BAC4464029BC5 /* Pods_SeatCode_SeatCodeUITests.framework */; };
 		7AB2BAD20559CD11408899CB /* Pods_SeatCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01EB0E3FAF7F0A56FE80C82 /* Pods_SeatCodeTests.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +124,10 @@
 		5EDEC7ED2887F2A600CF8239 /* TripMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMap.swift; sourceTree = "<group>"; };
 		5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAPI.swift; sourceTree = "<group>"; };
 		5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCUT.swift; sourceTree = "<group>"; };
+		5EDEC7F3288834A900CF8239 /* PopUpAnnotation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpAnnotation.xib; sourceTree = "<group>"; };
+		5EDEC7F52888352800CF8239 /* PopUpAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAnnotation.swift; sourceTree = "<group>"; };
+		5EDEC7F8288849F400CF8239 /* StopPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPinAnnotation.swift; sourceTree = "<group>"; };
+		5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPinAnnotationView.swift; sourceTree = "<group>"; };
 		6F44E05357E988D26AFDEE13 /* Pods-SeatCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode.release.xcconfig"; path = "Target Support Files/Pods-SeatCode/Pods-SeatCode.release.xcconfig"; sourceTree = "<group>"; };
 		7C8133BEF17686A05DA33527 /* Pods_SeatCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA48A034E49E7374780D2 /* Pods-SeatCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCodeTests.debug.xcconfig"; path = "Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -420,6 +428,7 @@
 			children = (
 				5E72527C2887252B0003963E /* TripList.swift */,
 				5E725280288727030003963E /* TripListCell.swift */,
+				5EDEC7F7288849DF00CF8239 /* PinMap */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -430,6 +439,17 @@
 				5E72528928873DF50003963E /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EDEC7F7288849DF00CF8239 /* PinMap */ = {
+			isa = PBXGroup;
+			children = (
+				5EDEC7F3288834A900CF8239 /* PopUpAnnotation.xib */,
+				5EDEC7F52888352800CF8239 /* PopUpAnnotation.swift */,
+				5EDEC7F8288849F400CF8239 /* StopPinAnnotation.swift */,
+				5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */,
+			);
+			path = PinMap;
 			sourceTree = "<group>";
 		};
 		8C15358BEB695A2F2F76A8EC /* Frameworks */ = {
@@ -552,6 +572,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDEC7F4288834A900CF8239 /* PopUpAnnotation.xib in Resources */,
 				5E72520F2886E7480003963E /* LaunchScreen.storyboard in Resources */,
 				5E72528728873D590003963E /* Localizable.strings in Resources */,
 				5E72520C2886E7480003963E /* Assets.xcassets in Resources */,
@@ -712,6 +733,8 @@
 				5E72527D2887252B0003963E /* TripList.swift in Sources */,
 				5E72524A2886F45A0003963E /* TripAPI.swift in Sources */,
 				5E72527F2887259B0003963E /* TripVM.swift in Sources */,
+				5EDEC7FB28884A7000CF8239 /* StopPinAnnotationView.swift in Sources */,
+				5EDEC7F9288849F400CF8239 /* StopPinAnnotation.swift in Sources */,
 				5E725269288701830003963E /* Trip.swift in Sources */,
 				5E72525F2886FC9E0003963E /* TripsVC.swift in Sources */,
 				5E7252572886FA390003963E /* MainFlowCoordinator.swift in Sources */,
@@ -723,6 +746,7 @@
 				5E7252622886FD860003963E /* TripsInteractor.swift in Sources */,
 				5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */,
 				5E7252432886EFA30003963E /* APIManager.swift in Sources */,
+				5EDEC7F62888352800CF8239 /* PopUpAnnotation.swift in Sources */,
 				5E725292288753040003963E /* ErrorAPI.swift in Sources */,
 				5E72528A28873DF50003963E /* StringExtension.swift in Sources */,
 				5EDEC7EC2887E8A300CF8239 /* Point.swift in Sources */,
