@@ -33,7 +33,6 @@
 		5E72526F28871DF50003963E /* TripsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72526E28871DF50003963E /* TripsPresenter.swift */; };
 		5E72527428871EB80003963E /* TripsInteractorUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527328871EB80003963E /* TripsInteractorUT.swift */; };
 		5E72527628871F030003963E /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527528871F030003963E /* APIManagerMock.swift */; };
-		5E725278288723E80003963E /* TripsPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725277288723E80003963E /* TripsPresenterUT.swift */; };
 		5E72527A288724120003963E /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725279288724120003963E /* DataManagerMock.swift */; };
 		5E72527D2887252B0003963E /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527C2887252B0003963E /* TripList.swift */; };
 		5E72527F2887259B0003963E /* TripVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72527E2887259B0003963E /* TripVM.swift */; };
@@ -46,6 +45,11 @@
 		5E72528E28874EA60003963E /* TripsVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528D28874EA60003963E /* TripsVCMock.swift */; };
 		5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528F28874ECF0003963E /* TripsInteractorMock.swift */; };
 		5E725292288753040003963E /* ErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725291288753040003963E /* ErrorAPI.swift */; };
+		5EDEC7EA2887E6E400CF8239 /* PointAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7E92887E6E400CF8239 /* PointAPI.swift */; };
+		5EDEC7EC2887E8A300CF8239 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EB2887E8A300CF8239 /* Point.swift */; };
+		5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7ED2887F2A600CF8239 /* TripMap.swift */; };
+		5EDEC7F02887F54A00CF8239 /* StopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */; };
+		5EDEC7F22888122C00CF8239 /* TripsVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */; };
 		65A4ABA6D5ACEF35801749B0 /* Pods_SeatCode_SeatCodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD42C56C88BAC4464029BC5 /* Pods_SeatCode_SeatCodeUITests.framework */; };
 		7AB2BAD20559CD11408899CB /* Pods_SeatCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01EB0E3FAF7F0A56FE80C82 /* Pods_SeatCodeTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,7 +103,6 @@
 		5E72526E28871DF50003963E /* TripsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsPresenter.swift; sourceTree = "<group>"; };
 		5E72527328871EB80003963E /* TripsInteractorUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorUT.swift; sourceTree = "<group>"; };
 		5E72527528871F030003963E /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
-		5E725277288723E80003963E /* TripsPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsPresenterUT.swift; sourceTree = "<group>"; };
 		5E725279288724120003963E /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
 		5E72527C2887252B0003963E /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		5E72527E2887259B0003963E /* TripVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripVM.swift; sourceTree = "<group>"; };
@@ -112,6 +115,11 @@
 		5E72528D28874EA60003963E /* TripsVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCMock.swift; sourceTree = "<group>"; };
 		5E72528F28874ECF0003963E /* TripsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorMock.swift; sourceTree = "<group>"; };
 		5E725291288753040003963E /* ErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAPI.swift; sourceTree = "<group>"; };
+		5EDEC7E92887E6E400CF8239 /* PointAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAPI.swift; sourceTree = "<group>"; };
+		5EDEC7EB2887E8A300CF8239 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		5EDEC7ED2887F2A600CF8239 /* TripMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMap.swift; sourceTree = "<group>"; };
+		5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAPI.swift; sourceTree = "<group>"; };
+		5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCUT.swift; sourceTree = "<group>"; };
 		6F44E05357E988D26AFDEE13 /* Pods-SeatCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode.release.xcconfig"; path = "Target Support Files/Pods-SeatCode/Pods-SeatCode.release.xcconfig"; sourceTree = "<group>"; };
 		7C8133BEF17686A05DA33527 /* Pods_SeatCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA48A034E49E7374780D2 /* Pods-SeatCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCodeTests.debug.xcconfig"; path = "Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,7 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				5E7252492886F45A0003963E /* TripAPI.swift */,
+				5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */,
 				5E725282288729BB0003963E /* OriginDestinationAPI.swift */,
+				5EDEC7E92887E6E400CF8239 /* PointAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +361,8 @@
 			children = (
 				5E72527B2887251E0003963E /* Views */,
 				5E72525E2886FC9E0003963E /* TripsVC.swift */,
+				5E72527E2887259B0003963E /* TripVM.swift */,
+				5EDEC7ED2887F2A600CF8239 /* TripMap.swift */,
 				5E72526E28871DF50003963E /* TripsPresenter.swift */,
 				5E7252612886FD860003963E /* TripsInteractor.swift */,
 			);
@@ -362,6 +374,7 @@
 			children = (
 				5E725268288701830003963E /* Trip.swift */,
 				5E72528428872AFA0003963E /* OriginDestination.swift */,
+				5EDEC7EB2887E8A300CF8239 /* Point.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,9 +407,9 @@
 			isa = PBXGroup;
 			children = (
 				5E72528B28874B3C0003963E /* TripPresenterUT.swift */,
+				5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */,
 				5E72528F28874ECF0003963E /* TripsInteractorMock.swift */,
 				5E72527328871EB80003963E /* TripsInteractorUT.swift */,
-				5E725277288723E80003963E /* TripsPresenterUT.swift */,
 				5E72528D28874EA60003963E /* TripsVCMock.swift */,
 			);
 			path = Trips;
@@ -406,7 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				5E72527C2887252B0003963E /* TripList.swift */,
-				5E72527E2887259B0003963E /* TripVM.swift */,
 				5E725280288727030003963E /* TripListCell.swift */,
 			);
 			path = Views;
@@ -704,14 +716,18 @@
 				5E72525F2886FC9E0003963E /* TripsVC.swift in Sources */,
 				5E7252572886FA390003963E /* MainFlowCoordinator.swift in Sources */,
 				5E72526D28871CDF0003963E /* App.swift in Sources */,
+				5EDEC7EA2887E6E400CF8239 /* PointAPI.swift in Sources */,
 				5E7252072886E7470003963E /* ViewController.swift in Sources */,
 				5E7252032886E7470003963E /* AppDelegate.swift in Sources */,
+				5EDEC7F02887F54A00CF8239 /* StopAPI.swift in Sources */,
 				5E7252622886FD860003963E /* TripsInteractor.swift in Sources */,
 				5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */,
 				5E7252432886EFA30003963E /* APIManager.swift in Sources */,
 				5E725292288753040003963E /* ErrorAPI.swift in Sources */,
 				5E72528A28873DF50003963E /* StringExtension.swift in Sources */,
+				5EDEC7EC2887E8A300CF8239 /* Point.swift in Sources */,
 				5E7252052886E7470003963E /* SceneDelegate.swift in Sources */,
+				5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */,
 				5E72528528872AFA0003963E /* OriginDestination.swift in Sources */,
 				5E72523F2886ED350003963E /* R.generated.swift in Sources */,
 			);
@@ -725,9 +741,9 @@
 				5E72528E28874EA60003963E /* TripsVCMock.swift in Sources */,
 				5E7252662886FF690003963E /* DataManagerUT.swift in Sources */,
 				5E72528C28874B3C0003963E /* TripPresenterUT.swift in Sources */,
+				5EDEC7F22888122C00CF8239 /* TripsVCUT.swift in Sources */,
 				5E72527628871F030003963E /* APIManagerMock.swift in Sources */,
 				5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */,
-				5E725278288723E80003963E /* TripsPresenterUT.swift in Sources */,
 				5E7252482886F1060003963E /* APIManagerUT.swift in Sources */,
 				5E72527A288724120003963E /* DataManagerMock.swift in Sources */,
 			);

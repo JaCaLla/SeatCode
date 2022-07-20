@@ -20,6 +20,7 @@ class TripsVC: UIViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var routeList: TripList!
+    @IBOutlet weak var tripMap: TripMap!
 
 
     // MARK: - Private attributes
@@ -53,7 +54,12 @@ class TripsVC: UIViewController {
 
     // MARK: - Private methods
     func setupViewController() {
+        title = R.string.localizable.trips_title.key.localized 
         hud.textLabel.text = R.string.localizable.trips_loading.key.localized
+        
+        routeList.onSelect = { [weak self] tripVM in
+            self?.tripMap.set(tripVM: tripVM)
+        }
     }
 }
 

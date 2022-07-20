@@ -26,6 +26,10 @@ class APIManagerUT: XCTestCase {
         case .success(let apiTrips):
             XCTAssertEqual(apiTrips[3].destination.address.isEmpty, false)
             XCTAssertEqual(apiTrips[3].origin.address.isEmpty, false)
+            XCTAssertEqual(apiTrips[3].origin.point.latitude > 0, true)
+            XCTAssertEqual(apiTrips[3].route.isEmpty, false)
+            XCTAssertEqual(apiTrips[3].stops.count, 2)
+            XCTAssertEqual(apiTrips[3].stops[0].id, 9)
             XCTAssertEqual(apiTrips.count, 7)
         default:
             XCTFail("Unexpected response")

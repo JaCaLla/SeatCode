@@ -198,3 +198,15 @@ Pods/Target Support Files/JGProgressHUD/JGProgressHUD-umbrella.h
 Pods/Target Support Files/JGProgressHUD/JGProgressHUD.debug.xcconfig
 Pods/Target Support Files/JGProgressHUD/JGProgressHUD.modulemap
 Pods/Target Support Files/JGProgressHUD/JGProgressHUD.release.xcconfig
+Pods/Polyline/LICENSE.txt
+Pods/Polyline/README.md
+Pods/Polyline/Sources/Polyline/CoreLocation.swift
+Pods/Polyline/Sources/Polyline/Polyline.h
+Pods/Polyline/Sources/Polyline/Polyline.swift
+Pods/Target Support Files/Polyline/Polyline-dummy.m
+Pods/Target Support Files/Polyline/Polyline-Info.plist
+Pods/Target Support Files/Polyline/Polyline-prefix.pch
+Pods/Target Support Files/Polyline/Polyline-umbrella.h
+Pods/Target Support Files/Polyline/Polyline.debug.xcconfig
+Pods/Target Support Files/Polyline/Polyline.modulemap
+Pods/Target Support Files/Polyline/Polyline.release.xcconfig

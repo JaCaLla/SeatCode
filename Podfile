@@ -10,6 +10,7 @@ target 'SeatCode' do
   
   # Pods for UI
   pod 'JGProgressHUD'
+  pod 'Polyline', '~> 5.0'
 
   target 'SeatCodeTests' do
     inherit! :search_paths

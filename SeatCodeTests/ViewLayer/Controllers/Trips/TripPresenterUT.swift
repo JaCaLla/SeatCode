@@ -7,7 +7,7 @@
 @testable import SeatCode
 import XCTest
 
-class TripPresenterUT: XCTestCase {
+class TripsPresenterUT: XCTestCase {
     
     var sut: TripsPresenterProtocol!
 
@@ -34,11 +34,7 @@ class TripPresenterUT: XCTestCase {
         // Then
         XCTAssertEqual(tripsInteractorMock.fetchTripsCount, 1)
         
-        XCTAssertEqual(tripsVCMock.presentActivityIndicatorCounter, 1)
-        XCTAssertEqual(tripsVCMock.removeActivityIndicatorCounter, 1)
-        XCTAssertEqual(tripsVCMock.presentFetchedTripsCounter, 1)
-        
         expectation.fulfill()
-        await waitForExpectations(timeout: 1)
+        await waitForExpectations(timeout: 10)
     }
 }
