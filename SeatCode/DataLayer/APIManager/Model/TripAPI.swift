@@ -14,5 +14,6 @@ struct TripAPI: Codable {
     let driverName: String
     let destination: OriginDestinationAPI
     let origin: OriginDestinationAPI
+    let route: String
+    var stops: [StopAPI] = []
 }
-

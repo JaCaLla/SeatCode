@@ -10,6 +10,7 @@ import UIKit
 class TripList: UITableView {
     
     // MARK: - Callbacks
+    var onSelect: (TripVM) -> Void = { _ in /* Default empty block */}
     
     // MARK: - Private attributes
     private var tripsVM:[TripVM] = []
@@ -29,20 +30,29 @@ class TripList: UITableView {
     // MARK: - Private methdos
     func setupView() {
         dataSource = self
+        delegate = self
         self.tableFooterView = UIView()
     }
 }
 
+// MARK: - UITableViewDataSource
 extension TripList: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tripsVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                guard let routeListCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.routeListCell.identifier, for: indexPath) as? TripListCell else {
+                guard let tripListCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.routeListCell.identifier, for: indexPath) as? TripListCell else {
             return UITableViewCell()
         }
-        routeListCell.set(routeVM: self.tripsVM[indexPath.row])
-        return routeListCell
+        tripListCell.set(routeVM: self.tripsVM[indexPath.row])
+        return tripListCell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension TripList: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.onSelect(self.tripsVM[indexPath.row])
     }
 }

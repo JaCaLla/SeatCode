@@ -14,7 +14,10 @@ struct Trip {
     let driverName: String
     let destination: OriginDestination
     let origin: OriginDestination
+    let route: String
+    let stopPoints: [Point]
     
+    // MARK: - Initializer/Constructor
     init(tripAPI: TripAPI) {
         self.status = tripAPI.status
         self.startTime = tripAPI.startTime
@@ -22,5 +25,20 @@ struct Trip {
         self.driverName = tripAPI.driverName
         self.origin = OriginDestination(originDestinationAPI: tripAPI.origin)
         self.destination = OriginDestination(originDestinationAPI: tripAPI.destination)
+        self.route = tripAPI.route
+        self.stopPoints = Trip.buildPointsTrip(tripAPI: tripAPI)
+
+    }
+    
+    // MARK: - Private/Internal methods
+    private static func buildPointsTrip(tripAPI: TripAPI) -> [Point] {
+        var points: [Point] = []
+        points.append(Point(pointAPI: tripAPI.origin.point))
+        points.append(contentsOf: tripAPI.stops.compactMap({
+            guard let uwpPoint = $0.point else { return nil}
+            return Point(pointAPI: uwpPoint, id: $0.id)
+        }))
+        points.append(Point(pointAPI: tripAPI.destination.point))
+        return points
     }
 }

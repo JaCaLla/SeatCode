@@ -9,4 +9,5 @@ import Foundation
 
 struct OriginDestinationAPI: Codable {
     let address: String
+    let point: PointAPI
 }

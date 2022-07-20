@@ -25,7 +25,7 @@ class DataManagerUT: XCTestCase {
         // When
         let result = await sut.fetchTrips()
         switch result {
-        case .success(let _):
+        case .success( _):
             // Then
             XCTAssertEqual(apiManagerMock.fetchTripsCounter, 1)
         default:
@@ -47,6 +47,13 @@ class DataManagerUT: XCTestCase {
             XCTAssertEqual(trips[3].destination.address.isEmpty, false)
             XCTAssertEqual(trips[3].origin.address.isEmpty, false)
             XCTAssertEqual(trips[3].status, "scheduled")
+            XCTAssertEqual(trips[3].origin.address.isEmpty, false)
+            XCTAssertEqual(trips[3].origin.point.latitude > 0, true)
+            XCTAssertEqual(trips[3].route.isEmpty, false)
+            XCTAssertNil(trips[3].stopPoints[0].id)
+            XCTAssertEqual(trips[3].stopPoints[1].id, 9)
+            XCTAssertEqual(trips[3].stopPoints[2].id, 10)
+            XCTAssertNil(trips[3].stopPoints[3].id)
         default:
             XCTFail("Unexpected response")
         }
