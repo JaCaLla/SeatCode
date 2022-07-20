@@ -14,7 +14,7 @@ struct Trip {
     let driverName: String
     let destination: OriginDestination
     let origin: OriginDestination
-    let route: String
+    let polylineStr: String
     let stopPoints: [Point]
     
     // MARK: - Initializer/Constructor
@@ -25,7 +25,7 @@ struct Trip {
         self.driverName = tripAPI.driverName
         self.origin = OriginDestination(originDestinationAPI: tripAPI.origin)
         self.destination = OriginDestination(originDestinationAPI: tripAPI.destination)
-        self.route = tripAPI.route
+        self.polylineStr = tripAPI.route
         self.stopPoints = Trip.buildPointsTrip(tripAPI: tripAPI)
 
     }

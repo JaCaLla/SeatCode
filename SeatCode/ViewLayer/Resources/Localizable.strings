@@ -8,3 +8,6 @@
 
 "trips_title" = "User trips";
 "trips_loading" = "Loading";
+"trips_origin" = "Origin";
+"trips_destination" = "Destination";
+"trips_id_stop" = "Stop Id.";
