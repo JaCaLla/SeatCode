@@ -12,8 +12,10 @@ import JGProgressHUD
 protocol TripsVCProtocol: AnyObject {
     func presentActivityIndicator()
     func removeActivityIndicator()
-    func present(error: Error)
+    func presentAlertError(message: String)
     func presentFetchedTrips(tripsVM: [TripVM])
+    func presentStopPoints(tripVM: TripVM)
+    func onGetIssue(issue: Issue)
 }
 
 class TripsVC: UIViewController {
@@ -21,11 +23,13 @@ class TripsVC: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var tripList: TripList!
     @IBOutlet weak var tripMap: TripMap!
-
+    
+    // MARK: - Callback
+    var onGetIssue: (Issue) -> Void = { _ in /* Default empty block */}
 
     // MARK: - Private attributes
-    let hud = JGProgressHUD()
-    var presenter: TripsPresenterProtocol = TripsPresenter()
+    private let hud = JGProgressHUD()
+    private var presenter: TripsPresenterProtocol = TripsPresenter()
 
     // MARK: - Constructor/Initializer
     public static func instantiate(presenter: TripsPresenterProtocol = TripsPresenter()) -> TripsVC {
@@ -58,7 +62,15 @@ class TripsVC: UIViewController {
         hud.textLabel.text = R.string.localizable.trips_loading.key.localized
         
         tripList.onSelect = { [weak self] tripVM in
-            self?.tripMap.set(tripVM: tripVM)
+            //self?.tripMap.set(tripVM: tripVM)
+            Task {
+                await self?.presenter.fetchStops(tripVM: tripVM)
+            }
+        }
+        tripList.onGetIssue = { [weak self] tripVM in
+            Task {
+                await self?.presenter.fetchIssue(endTime: tripVM.endTime)
+            }
         }
     }
 }
@@ -73,12 +85,26 @@ extension TripsVC: TripsVCProtocol {
     func removeActivityIndicator() {
         hud.dismiss(animated: true)
     }
-
-    func present(error: Error) {
-        // TODO
+    
+    func presentAlertError(message: String) {
+        let alert = UIAlertController(title: R.string.localizable.issue_alert_title.key.localized,
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: R.string.localizable.alert_continue.key.localized,
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
     func presentFetchedTrips(tripsVM: [TripVM]) {
         tripList.set(tripsVM: tripsVM)
+    }
+    
+    func presentStopPoints(tripVM: TripVM) {
+        tripMap.set(tripVM: tripVM)
+    }
+    
+    func onGetIssue(issue: Issue) {
+        onGetIssue(issue)
     }
 }

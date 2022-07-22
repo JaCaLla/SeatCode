@@ -4,11 +4,17 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - Realm (10.28.2):
+    - Realm/Headers (= 10.28.2)
+  - Realm/Headers (10.28.2)
+  - RealmSwift (10.28.2):
+    - Realm (= 10.28.2)
 
 DEPENDENCIES:
   - JGProgressHUD
   - Polyline (~> 5.0)
   - R.swift (~> 5.0.3)
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -16,13 +22,17 @@ SPEC REPOS:
     - Polyline
     - R.swift
     - R.swift.Library
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   Polyline: fce41d72e1146c41c6d081f7656827226f643dff
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
+  RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
 
-PODFILE CHECKSUM: 4f96bbd5008a5fcdd6dd42dd17b6c587017c3d76
+PODFILE CHECKSUM: fab1f979007bd3cb5456e7dc3d871b07e15095ed
 
 COCOAPODS: 1.11.3

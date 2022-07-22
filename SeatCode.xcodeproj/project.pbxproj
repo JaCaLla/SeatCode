@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		39147EF9FC94B254A5235A49 /* Pods_SeatCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8133BEF17686A05DA33527 /* Pods_SeatCode.framework */; };
+		5E5C0EE02889A27000B02643 /* IssueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EDF2889A27000B02643 /* IssueCoordinator.swift */; };
+		5E5C0EE22889AEBC00B02643 /* IssueVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE12889AEBC00B02643 /* IssueVM.swift */; };
+		5E5C0EE42889AFC400B02643 /* IssueInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE32889AFC400B02643 /* IssueInteractor.swift */; };
+		5E5C0EE62889B09400B02643 /* IssuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE52889B09400B02643 /* IssuePresenter.swift */; };
+		5E5C0EE82889B0EB00B02643 /* IssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE72889B0EB00B02643 /* IssueVC.swift */; };
+		5E5C0EEB2889B34A00B02643 /* ActionIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EEA2889B34A00B02643 /* ActionIssueTVC.swift */; };
+		5E5C0EEE2889B3A200B02643 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EED2889B3A200B02643 /* AppColors.swift */; };
+		5E5C0EF02889B3EF00B02643 /* AttributeIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EEF2889B3EF00B02643 /* AttributeIssueTVC.swift */; };
+		5E5C0EF22889B42F00B02643 /* AttributeIssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF12889B42F00B02643 /* AttributeIssueType.swift */; };
+		5E5C0EF42889B48900B02643 /* ReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF32889B48900B02643 /* ReportTVC.swift */; };
+		5E5C0EF62889B4BB00B02643 /* DateSelectorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF52889B4BB00B02643 /* DateSelectorTVC.swift */; };
+		5E5C0EF82889B52C00B02643 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF72889B52C00B02643 /* IssueView.swift */; };
+		5E5C0EFA288A6A8600B02643 /* StopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF9288A6A8600B02643 /* StopAPI.swift */; };
+		5E5C0EFC288A8CF000B02643 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EFB288A8CF000B02643 /* Stop.swift */; };
 		5E7252032886E7470003963E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252022886E7470003963E /* AppDelegate.swift */; };
 		5E7252052886E7470003963E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252042886E7470003963E /* SceneDelegate.swift */; };
 		5E7252072886E7470003963E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7252062886E7470003963E /* ViewController.swift */; };
@@ -46,14 +60,20 @@
 		5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528F28874ECF0003963E /* TripsInteractorMock.swift */; };
 		5E725292288753040003963E /* ErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725291288753040003963E /* ErrorAPI.swift */; };
 		5EDEC7EA2887E6E400CF8239 /* PointAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7E92887E6E400CF8239 /* PointAPI.swift */; };
-		5EDEC7EC2887E8A300CF8239 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EB2887E8A300CF8239 /* Point.swift */; };
+		5EDEC7EC2887E8A300CF8239 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EB2887E8A300CF8239 /* StopPoint.swift */; };
 		5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7ED2887F2A600CF8239 /* TripMap.swift */; };
-		5EDEC7F02887F54A00CF8239 /* StopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */; };
+		5EDEC7F02887F54A00CF8239 /* TripStopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EF2887F54A00CF8239 /* TripStopAPI.swift */; };
 		5EDEC7F22888122C00CF8239 /* TripsVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */; };
 		5EDEC7F4288834A900CF8239 /* PopUpAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F3288834A900CF8239 /* PopUpAnnotation.xib */; };
 		5EDEC7F62888352800CF8239 /* PopUpAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F52888352800CF8239 /* PopUpAnnotation.swift */; };
 		5EDEC7F9288849F400CF8239 /* StopPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7F8288849F400CF8239 /* StopPinAnnotation.swift */; };
 		5EDEC7FB28884A7000CF8239 /* StopPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */; };
+		5EDEC7FE28889B9500CF8239 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7FD28889B9500CF8239 /* RealmConfig.swift */; };
+		5EDEC80028889BE800CF8239 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7FF28889BE800CF8239 /* DBManager.swift */; };
+		5EDEC80328889C7C00CF8239 /* IssueDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC80228889C7C00CF8239 /* IssueDB.swift */; };
+		5EDEC80528889DDA00CF8239 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC80428889DDA00CF8239 /* Issue.swift */; };
+		5EDEC80928889E7C00CF8239 /* IssueDBUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC80828889E7C00CF8239 /* IssueDBUT.swift */; };
+		5EDEC80B28889FA900CF8239 /* DBManagerUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC80A28889FA900CF8239 /* DBManagerUT.swift */; };
 		65A4ABA6D5ACEF35801749B0 /* Pods_SeatCode_SeatCodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD42C56C88BAC4464029BC5 /* Pods_SeatCode_SeatCodeUITests.framework */; };
 		7AB2BAD20559CD11408899CB /* Pods_SeatCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01EB0E3FAF7F0A56FE80C82 /* Pods_SeatCodeTests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +98,20 @@
 /* Begin PBXFileReference section */
 		21862282B996E9BBBA51AD7E /* Pods-SeatCode-SeatCodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode-SeatCodeUITests.release.xcconfig"; path = "Target Support Files/Pods-SeatCode-SeatCodeUITests/Pods-SeatCode-SeatCodeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		342B8771CFDAB785009C4FFF /* Pods-SeatCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode.debug.xcconfig"; path = "Target Support Files/Pods-SeatCode/Pods-SeatCode.debug.xcconfig"; sourceTree = "<group>"; };
+		5E5C0EDF2889A27000B02643 /* IssueCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCoordinator.swift; sourceTree = "<group>"; };
+		5E5C0EE12889AEBC00B02643 /* IssueVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVM.swift; sourceTree = "<group>"; };
+		5E5C0EE32889AFC400B02643 /* IssueInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInteractor.swift; sourceTree = "<group>"; };
+		5E5C0EE52889B09400B02643 /* IssuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenter.swift; sourceTree = "<group>"; };
+		5E5C0EE72889B0EB00B02643 /* IssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVC.swift; sourceTree = "<group>"; };
+		5E5C0EEA2889B34A00B02643 /* ActionIssueTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIssueTVC.swift; sourceTree = "<group>"; };
+		5E5C0EED2889B3A200B02643 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		5E5C0EEF2889B3EF00B02643 /* AttributeIssueTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueTVC.swift; sourceTree = "<group>"; };
+		5E5C0EF12889B42F00B02643 /* AttributeIssueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueType.swift; sourceTree = "<group>"; };
+		5E5C0EF32889B48900B02643 /* ReportTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
+		5E5C0EF52889B4BB00B02643 /* DateSelectorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorTVC.swift; sourceTree = "<group>"; };
+		5E5C0EF72889B52C00B02643 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		5E5C0EF9288A6A8600B02643 /* StopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAPI.swift; sourceTree = "<group>"; };
+		5E5C0EFB288A8CF000B02643 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		5E7251FF2886E7470003963E /* SeatCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7252022886E7470003963E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7252042886E7470003963E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,14 +154,20 @@
 		5E72528F28874ECF0003963E /* TripsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorMock.swift; sourceTree = "<group>"; };
 		5E725291288753040003963E /* ErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAPI.swift; sourceTree = "<group>"; };
 		5EDEC7E92887E6E400CF8239 /* PointAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAPI.swift; sourceTree = "<group>"; };
-		5EDEC7EB2887E8A300CF8239 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		5EDEC7EB2887E8A300CF8239 /* StopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		5EDEC7ED2887F2A600CF8239 /* TripMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMap.swift; sourceTree = "<group>"; };
-		5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAPI.swift; sourceTree = "<group>"; };
+		5EDEC7EF2887F54A00CF8239 /* TripStopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStopAPI.swift; sourceTree = "<group>"; };
 		5EDEC7F12888122C00CF8239 /* TripsVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCUT.swift; sourceTree = "<group>"; };
 		5EDEC7F3288834A900CF8239 /* PopUpAnnotation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpAnnotation.xib; sourceTree = "<group>"; };
 		5EDEC7F52888352800CF8239 /* PopUpAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAnnotation.swift; sourceTree = "<group>"; };
 		5EDEC7F8288849F400CF8239 /* StopPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPinAnnotation.swift; sourceTree = "<group>"; };
 		5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPinAnnotationView.swift; sourceTree = "<group>"; };
+		5EDEC7FD28889B9500CF8239 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		5EDEC7FF28889BE800CF8239 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		5EDEC80228889C7C00CF8239 /* IssueDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDB.swift; sourceTree = "<group>"; };
+		5EDEC80428889DDA00CF8239 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		5EDEC80828889E7C00CF8239 /* IssueDBUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDBUT.swift; sourceTree = "<group>"; };
+		5EDEC80A28889FA900CF8239 /* DBManagerUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerUT.swift; sourceTree = "<group>"; };
 		6F44E05357E988D26AFDEE13 /* Pods-SeatCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCode.release.xcconfig"; path = "Target Support Files/Pods-SeatCode/Pods-SeatCode.release.xcconfig"; sourceTree = "<group>"; };
 		7C8133BEF17686A05DA33527 /* Pods_SeatCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA48A034E49E7374780D2 /* Pods-SeatCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatCodeTests.debug.xcconfig"; path = "Target Support Files/Pods-SeatCodeTests/Pods-SeatCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +216,40 @@
 				C3D28CDAD315EB040DA472A4 /* Pods-SeatCodeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E5C0EDE2889A23B00B02643 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C0EE92889B32C00B02643 /* View */,
+				5E5C0EDF2889A27000B02643 /* IssueCoordinator.swift */,
+				5E5C0EE12889AEBC00B02643 /* IssueVM.swift */,
+				5E5C0EE72889B0EB00B02643 /* IssueVC.swift */,
+				5E5C0EE32889AFC400B02643 /* IssueInteractor.swift */,
+				5E5C0EE52889B09400B02643 /* IssuePresenter.swift */,
+			);
+			path = Issue;
+			sourceTree = "<group>";
+		};
+		5E5C0EE92889B32C00B02643 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C0EEA2889B34A00B02643 /* ActionIssueTVC.swift */,
+				5E5C0EF72889B52C00B02643 /* IssueView.swift */,
+				5E5C0EF12889B42F00B02643 /* AttributeIssueType.swift */,
+				5E5C0EEF2889B3EF00B02643 /* AttributeIssueTVC.swift */,
+				5E5C0EF32889B48900B02643 /* ReportTVC.swift */,
+				5E5C0EF52889B4BB00B02643 /* DateSelectorTVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E5C0EEC2889B38E00B02643 /* Stytles */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C0EED2889B3A200B02643 /* AppColors.swift */,
+			);
+			path = Stytles;
 			sourceTree = "<group>";
 		};
 		5E7251F62886E7470003963E = {
@@ -246,6 +320,7 @@
 		5E72523C2886ED350003963E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E5C0EEC2889B38E00B02643 /* Stytles */,
 				5E72520B2886E7480003963E /* Assets.xcassets */,
 				5E72528628873D590003963E /* Localizable.strings */,
 				5E72523D2886ED350003963E /* R.Swift */,
@@ -264,6 +339,7 @@
 		5E7252402886EF170003963E /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5EDEC7FC28889B5C00CF8239 /* DBManager */,
 				5E7252632886FDE90003963E /* DataManager.swift */,
 				5E725267288701760003963E /* Model */,
 				5E7252412886EF730003963E /* APIManager */,
@@ -285,9 +361,10 @@
 			isa = PBXGroup;
 			children = (
 				5E7252492886F45A0003963E /* TripAPI.swift */,
-				5EDEC7EF2887F54A00CF8239 /* StopAPI.swift */,
+				5EDEC7EF2887F54A00CF8239 /* TripStopAPI.swift */,
 				5E725282288729BB0003963E /* OriginDestinationAPI.swift */,
 				5EDEC7E92887E6E400CF8239 /* PointAPI.swift */,
+				5E5C0EF9288A6A8600B02643 /* StopAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +372,7 @@
 		5E7252452886F0E80003963E /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5EDEC80628889E3200CF8239 /* DBManager */,
 				5E7252652886FF690003963E /* DataManagerUT.swift */,
 				5E725279288724120003963E /* DataManagerMock.swift */,
 				5E7252462886F0F00003963E /* APIManager */,
@@ -359,6 +437,7 @@
 		5E7252582886FA970003963E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E5C0EDE2889A23B00B02643 /* Issue */,
 				5E72525D2886FC1B0003963E /* Trips */,
 			);
 			path = Controllers;
@@ -381,8 +460,10 @@
 			isa = PBXGroup;
 			children = (
 				5E725268288701830003963E /* Trip.swift */,
+				5EDEC80428889DDA00CF8239 /* Issue.swift */,
 				5E72528428872AFA0003963E /* OriginDestination.swift */,
-				5EDEC7EB2887E8A300CF8239 /* Point.swift */,
+				5EDEC7EB2887E8A300CF8239 /* StopPoint.swift */,
+				5E5C0EFB288A8CF000B02643 /* Stop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +531,41 @@
 				5EDEC7FA28884A7000CF8239 /* StopPinAnnotationView.swift */,
 			);
 			path = PinMap;
+			sourceTree = "<group>";
+		};
+		5EDEC7FC28889B5C00CF8239 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				5EDEC7FD28889B9500CF8239 /* RealmConfig.swift */,
+				5EDEC7FF28889BE800CF8239 /* DBManager.swift */,
+				5EDEC80128889C4700CF8239 /* Model */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		5EDEC80128889C4700CF8239 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EDEC80228889C7C00CF8239 /* IssueDB.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EDEC80628889E3200CF8239 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				5EDEC80A28889FA900CF8239 /* DBManagerUT.swift */,
+				5EDEC80728889E4800CF8239 /* Model */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		5EDEC80728889E4800CF8239 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EDEC80828889E7C00CF8239 /* IssueDBUT.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8C15358BEB695A2F2F76A8EC /* Frameworks */ = {
@@ -728,31 +844,49 @@
 				5E7252542886F9F60003963E /* StartUpAppSequencer.swift in Sources */,
 				5E7252642886FDE90003963E /* DataManager.swift in Sources */,
 				5E725283288729BB0003963E /* OriginDestinationAPI.swift in Sources */,
+				5E5C0EF02889B3EF00B02643 /* AttributeIssueTVC.swift in Sources */,
+				5E5C0EE02889A27000B02643 /* IssueCoordinator.swift in Sources */,
 				5E7252522886F9D70003963E /* PresentMainAppOperation.swift in Sources */,
 				5E725281288727030003963E /* TripListCell.swift in Sources */,
 				5E72527D2887252B0003963E /* TripList.swift in Sources */,
+				5E5C0EF42889B48900B02643 /* ReportTVC.swift in Sources */,
+				5E5C0EE62889B09400B02643 /* IssuePresenter.swift in Sources */,
+				5E5C0EFC288A8CF000B02643 /* Stop.swift in Sources */,
 				5E72524A2886F45A0003963E /* TripAPI.swift in Sources */,
 				5E72527F2887259B0003963E /* TripVM.swift in Sources */,
 				5EDEC7FB28884A7000CF8239 /* StopPinAnnotationView.swift in Sources */,
+				5E5C0EE82889B0EB00B02643 /* IssueVC.swift in Sources */,
 				5EDEC7F9288849F400CF8239 /* StopPinAnnotation.swift in Sources */,
+				5EDEC80028889BE800CF8239 /* DBManager.swift in Sources */,
 				5E725269288701830003963E /* Trip.swift in Sources */,
 				5E72525F2886FC9E0003963E /* TripsVC.swift in Sources */,
 				5E7252572886FA390003963E /* MainFlowCoordinator.swift in Sources */,
 				5E72526D28871CDF0003963E /* App.swift in Sources */,
 				5EDEC7EA2887E6E400CF8239 /* PointAPI.swift in Sources */,
+				5E5C0EE22889AEBC00B02643 /* IssueVM.swift in Sources */,
 				5E7252072886E7470003963E /* ViewController.swift in Sources */,
 				5E7252032886E7470003963E /* AppDelegate.swift in Sources */,
-				5EDEC7F02887F54A00CF8239 /* StopAPI.swift in Sources */,
+				5EDEC80528889DDA00CF8239 /* Issue.swift in Sources */,
+				5EDEC7F02887F54A00CF8239 /* TripStopAPI.swift in Sources */,
 				5E7252622886FD860003963E /* TripsInteractor.swift in Sources */,
+				5E5C0EF22889B42F00B02643 /* AttributeIssueType.swift in Sources */,
 				5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */,
 				5E7252432886EFA30003963E /* APIManager.swift in Sources */,
 				5EDEC7F62888352800CF8239 /* PopUpAnnotation.swift in Sources */,
 				5E725292288753040003963E /* ErrorAPI.swift in Sources */,
 				5E72528A28873DF50003963E /* StringExtension.swift in Sources */,
-				5EDEC7EC2887E8A300CF8239 /* Point.swift in Sources */,
+				5EDEC7FE28889B9500CF8239 /* RealmConfig.swift in Sources */,
+				5EDEC7EC2887E8A300CF8239 /* StopPoint.swift in Sources */,
+				5E5C0EEE2889B3A200B02643 /* AppColors.swift in Sources */,
+				5E5C0EFA288A6A8600B02643 /* StopAPI.swift in Sources */,
+				5EDEC80328889C7C00CF8239 /* IssueDB.swift in Sources */,
+				5E5C0EF62889B4BB00B02643 /* DateSelectorTVC.swift in Sources */,
+				5E5C0EEB2889B34A00B02643 /* ActionIssueTVC.swift in Sources */,
 				5E7252052886E7470003963E /* SceneDelegate.swift in Sources */,
 				5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */,
 				5E72528528872AFA0003963E /* OriginDestination.swift in Sources */,
+				5E5C0EE42889AFC400B02643 /* IssueInteractor.swift in Sources */,
+				5E5C0EF82889B52C00B02643 /* IssueView.swift in Sources */,
 				5E72523F2886ED350003963E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,7 +902,9 @@
 				5EDEC7F22888122C00CF8239 /* TripsVCUT.swift in Sources */,
 				5E72527628871F030003963E /* APIManagerMock.swift in Sources */,
 				5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */,
+				5EDEC80B28889FA900CF8239 /* DBManagerUT.swift in Sources */,
 				5E7252482886F1060003963E /* APIManagerUT.swift in Sources */,
+				5EDEC80928889E7C00CF8239 /* IssueDBUT.swift in Sources */,
 				5E72527A288724120003963E /* DataManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

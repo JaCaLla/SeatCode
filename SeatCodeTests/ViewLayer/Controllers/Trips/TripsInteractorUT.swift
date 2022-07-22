@@ -55,5 +55,34 @@ class TripsInteractorUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
+    
+    func testFetchStops() async throws {
+        // Given
+        let expectation = expectation(description: "testFetchStops")
+        let result = await sut.fetchTrips()
+        switch result {
+        case .success(let trips):
+            XCTAssertEqual(trips.count, 7)
+            let trip = trips[0]
+            let result = await sut.fetchStops(trip: trip)
+            switch result {
+            case .success(let trip):
+                XCTAssertEqual(trip.stopPoints[0].stop, trip.stopPoints[0].stop)
+                XCTAssertNotNil(trip.stopPoints[1].stop)
+                XCTAssertEqual(trip.stopPoints[1].stop?.userName,"Manuel Gomez")
+                XCTAssertEqual(trip.stopPoints[1].stop?.address,"Ramblas, Barcelona")
+                XCTAssertNotNil(trip.stopPoints[2].stop)
+                XCTAssertNotNil(trip.stopPoints[3].stop)
+                XCTAssertNotNil(trip.stopPoints[4].stop)
+                XCTAssertEqual(trip.stopPoints[5].stop, trip.stopPoints[0].stop)
+            default:
+                XCTFail("Unexpected response")
+            }
+        default:
+            XCTFail("Unexpected response")
+        }
+        expectation.fulfill()
+        await waitForExpectations(timeout: 1)
+    }
 
 }

@@ -12,4 +12,6 @@ enum ErrorAPI: Error {
     case invalidHTTPResponse
     case failedOnParsingJSON
     case noDataResponse
+    case failedParallelFetching
+    case fetchStopsFailed
 }

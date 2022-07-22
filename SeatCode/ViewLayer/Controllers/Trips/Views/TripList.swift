@@ -11,6 +11,7 @@ class TripList: UITableView {
     
     // MARK: - Callbacks
     var onSelect: (TripVM) -> Void = { _ in /* Default empty block */}
+    var onGetIssue: (TripVM) -> Void = { _ in /* Default empty block */ }
     
     // MARK: - Private attributes
     private var tripsVM:[TripVM] = []
@@ -46,6 +47,10 @@ extension TripList: UITableViewDataSource {
             return UITableViewCell()
         }
         tripListCell.set(tripVM: self.tripsVM[indexPath.row])
+        tripListCell.onGetIssue = { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.onGetIssue(weakSelf.tripsVM[indexPath.row])
+        }
         return tripListCell
     }
 }

@@ -11,6 +11,9 @@ target 'SeatCode' do
   # Pods for UI
   pod 'JGProgressHUD'
   pod 'Polyline', '~> 5.0'
+  
+  # Pod for persistence
+  pod 'RealmSwift'
 
   target 'SeatCodeTests' do
     inherit! :search_paths
