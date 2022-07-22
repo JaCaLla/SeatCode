@@ -8,11 +8,13 @@
 import Foundation
 
 internal final class TripsVCMock: TripsVCProtocol {
-    
+
     var presentActivityIndicatorCounter = 0
     var removeActivityIndicatorCounter = 0
     var presentCounter = 0
     var presentFetchedTripsCounter = 0
+    var onGetIssueCounter = 0
+    var presentStopPointsCounter = 0
     
     func presentActivityIndicator() {
         presentActivityIndicatorCounter += 1
@@ -22,11 +24,19 @@ internal final class TripsVCMock: TripsVCProtocol {
         removeActivityIndicatorCounter += 1
     }
     
-    func present(error: Error) {
+    func presentAlertError(message: String) {
         presentCounter += 1
     }
     
     func presentFetchedTrips(tripsVM: [TripVM]) {
         presentFetchedTripsCounter += 1
+    }
+    
+    func onGetIssue(issue: Issue) {
+        onGetIssueCounter += 1
+    }
+    
+    func presentStopPoints(tripVM: TripVM) {
+        presentStopPointsCounter += 1
     }
 }

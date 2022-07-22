@@ -11,3 +11,20 @@
 "trips_origin" = "Origin";
 "trips_destination" = "Destination";
 "trips_id_stop" = "Stop Id.";
+"trips_alert_title" = "Look out!";
+"trips_alert_message_stops" = "It was not possible fetch trip stop points. Try another trip";
+"trips_alert_message_trips" = "It was not possible fetch any trip. Review your internet connection";
+
+"issue_title" = "Fill issue form";
+"issue_name" = "Name";
+"issue_surename" = "Surename";
+"issue_email" = "Email";
+"issue_phone" = "Phone";
+"issue_report" = "Report";
+"issue_save" = "SAVE";
+"issue_timestamp" = "Timestamp";
+"issue_alert_title" = "Look out!";
+"issue_alert_message" = "Name, Surename and email are mandatory!\n Report maximum length is 200! \n... check email format";
+
+"alert_continue" = "Continue";
+

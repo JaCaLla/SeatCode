@@ -17,8 +17,7 @@ class MainFlowCoordinator {
 
     // MARK: - Private attributes
     private let navigationController = UINavigationController()
-    private var onGetIssueSubscription = Set<AnyCancellable>()
-    private var onDismissIssueSubscription = Set<AnyCancellable>()
+    private let issueCoordinator = IssueCoordinator()
 
     private init() { /*This prevents others from using the default '()' initializer for this class. */ }
 
@@ -31,8 +30,14 @@ class MainFlowCoordinator {
     private func presentTransactionsList() {
 
         let tripsVC = TripsVC.instantiate()
-            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = windowScene.windows.first else { return }
+        tripsVC.onGetIssue = { [weak self] issue in
+            guard let navigationController = tripsVC.navigationController else { return }
+            self?.issueCoordinator.start(navigationController: navigationController,
+                                     issue: issue)
+        }
+
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let window = windowScene.windows.first else { return }
         navigationController.viewControllers = [tripsVC]
         window.rootViewController = navigationController
     }

@@ -9,11 +9,11 @@ import Foundation
 
 struct TripAPI: Codable {
     let status: String
-    let startTime: Date
-    let endTime: Date
+    let startTime: String
+    let endTime: String
     let driverName: String
     let destination: OriginDestinationAPI
     let origin: OriginDestinationAPI
     let route: String
-    var stops: [StopAPI] = []
+    var stops: [TripStopAPI] = []
 }

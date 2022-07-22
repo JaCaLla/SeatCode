@@ -9,12 +9,12 @@ import Foundation
 
 struct OriginDestination {
     let address: String
-    let point: Point
+    let point: StopPoint
     
     // MARK: - Initializer/Constructor
     init(originDestinationAPI: OriginDestinationAPI) {
         self.address = originDestinationAPI.address
-        self.point = Point(pointAPI: originDestinationAPI.point)
+        self.point = StopPoint(pointAPI: originDestinationAPI.point)
     }
 }
 
