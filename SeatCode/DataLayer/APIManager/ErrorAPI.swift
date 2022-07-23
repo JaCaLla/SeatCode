@@ -14,4 +14,5 @@ enum ErrorAPI: Error {
     case noDataResponse
     case failedParallelFetching
     case fetchStopsFailed
+    case badFormedURL
 }

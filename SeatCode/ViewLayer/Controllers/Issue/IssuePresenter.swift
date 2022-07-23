@@ -32,7 +32,7 @@ internal final class IssuePresenter {
     }
 }
 
-// MARK:- IssuePresenterProtocol
+// MARK: - IssuePresenterProtocol
 extension IssuePresenter: IssuePresenterProtocol {
 
     func set(issueVC: IssueVCProtocol) {
@@ -45,32 +45,32 @@ extension IssuePresenter: IssuePresenterProtocol {
 
     func onNameValueChanged(value: String) {
         interactor.onNameValueChanged(value: value)
-    //    view?.refreshView(issueVM: getIssue())
+        //    view?.refreshView(issueVM: getIssue())
     }
 
     func onSurenameValueChanged(value: String) {
         interactor.onSurenameValueChanged(value: value)
-   //     view?.refreshView(issueVM: getIssue())
+        //     view?.refreshView(issueVM: getIssue())
     }
 
     func onEmailValueChanged(value: String) {
         interactor.onEmailValueChanged(value: value)
-       // view?.refreshView(issueVM: getIssue())
+        // view?.refreshView(issueVM: getIssue())
     }
 
     func onTimestampValueChanged(value: Date) {
         interactor.onTimestampValueChanged(value: value)
-  //      view?.refreshView(issueVM: getIssue())
+        //      view?.refreshView(issueVM: getIssue())
     }
 
     func onReportValueChanged(value: String) {
         interactor.onReportValueChanged(value: value)
-    //    view?.refreshView(issueVM: getIssue())
+        //    view?.refreshView(issueVM: getIssue())
     }
 
     func onPhoneValueChanged(value: String) {
         interactor.onPhoneValueChanged(value: value)
-      //  view?.refreshView(issueVM: getIssue())
+        //  view?.refreshView(issueVM: getIssue())
     }
 
     func isProperlyFilled() -> Bool {
@@ -80,7 +80,7 @@ extension IssuePresenter: IssuePresenterProtocol {
 
         return !issueVM.name.isEmpty && !issueVM.surename.isEmpty && !issueVM.email.isEmpty
     }
-    
+
     func onSaveAction() async {
         guard isProperlyFilled() else {
             view?.presentAlertFormNotProperyFullfilled()
@@ -92,7 +92,7 @@ extension IssuePresenter: IssuePresenterProtocol {
         view?.dismiss()
     }
 
-    //MARK: - Private/Internal methods
+    // MARK: - Private/Internal methods
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 

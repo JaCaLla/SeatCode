@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol DataManagerProtocol: AnyObject {
     func fetchTrips() async -> Result<[Trip], ErrorAPI>
@@ -20,7 +21,6 @@ internal final class DataManager {
     // MARK: - Injected attributes
     private var apiManager: APIManagerProtocol = APIManager()
 
-
     // MARK: - Initializers
     init(apiManager: APIManagerProtocol = APIManager()) {
 
@@ -28,7 +28,7 @@ internal final class DataManager {
     }
 }
 
-// MARK - DataManagerProtocol
+// MARK: - DataManagerProtocol
 extension DataManager: DataManagerProtocol {
 
     func fetchTrips() async -> Result<[Trip], ErrorAPI> {
@@ -47,7 +47,10 @@ extension DataManager: DataManagerProtocol {
 
     func create(issue: Issue) async {
         let issueDB = IssueDB(issue: issue)
-        return await currentApp.dbManager.create(issueDB: issueDB)
+        await currentApp.dbManager.create(issueDB: issueDB)
+     //   Task { @MainActor
+     //       UIApplication.shared.applicationIconBadgeNumber = getIssuesCount()
+     //   }
     }
 
     func getIssue(endTime: String) async -> Issue? {

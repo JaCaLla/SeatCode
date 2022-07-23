@@ -30,19 +30,19 @@ class TripListCell: UITableViewCell {
     // MARK: - Public methods
     func set(tripVM: TripVM) {
         self.tripVM = tripVM
-        
+
         lblOriginDestination.text = tripVM.originDestination
         lblStartEnd.text = tripVM.startEnd
         lblDriverName.text = tripVM.driverName
-        
+
         disclosureImage.image = tripVM.hasIssue ? UIImage(systemName: "text.badge.xmark") : UIImage(systemName: "checkmark.circle")
-        disclosureImage.tintColor = tripVM.hasIssue ? AppColors.Trip.issueFoundColor : AppColors.Trip.issueNotFoundColor
+        disclosureImage.tintColor = tripVM.hasIssue ? R.color.colorRed() : R.color.colorGreen()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         disclosureImage.addGestureRecognizer(tap)
         disclosureImage.isUserInteractionEnabled = true
     }
-    
-    // MARK : - Target methods
+
+    // MARK: - Target methods
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         onGetIssue()
     }

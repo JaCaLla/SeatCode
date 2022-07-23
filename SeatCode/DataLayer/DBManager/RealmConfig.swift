@@ -23,9 +23,9 @@ enum RealmConfig {
         // Set the block which will be called automatically when opening a Realm with
         // a schema version lower than the one set above
         migrationBlock: { migration, oldSchemaVersion in
-    }
+        }
     )
-   
+
     private static let utestConfig = Realm.Configuration(fileURL: nil,
                                                          inMemoryIdentifier: "test",
                                                          syncConfiguration: nil,

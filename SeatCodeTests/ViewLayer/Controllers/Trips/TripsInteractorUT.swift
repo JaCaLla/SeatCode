@@ -27,7 +27,7 @@ class TripsInteractorUT: XCTestCase {
         // When
         let result = await sut.fetchTrips()
         switch result {
-        case .success(_):
+        case .success:
             // Then
             XCTAssertEqual(dataManagerMock.fetchTripsCounter, 1)
         default:
@@ -55,7 +55,7 @@ class TripsInteractorUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
-    
+
     func testFetchStops() async throws {
         // Given
         let expectation = expectation(description: "testFetchStops")
@@ -69,8 +69,8 @@ class TripsInteractorUT: XCTestCase {
             case .success(let trip):
                 XCTAssertEqual(trip.stopPoints[0].stop, trip.stopPoints[0].stop)
                 XCTAssertNotNil(trip.stopPoints[1].stop)
-                XCTAssertEqual(trip.stopPoints[1].stop?.userName,"Manuel Gomez")
-                XCTAssertEqual(trip.stopPoints[1].stop?.address,"Ramblas, Barcelona")
+                XCTAssertEqual(trip.stopPoints[1].stop?.userName, "Manuel Gomez")
+                XCTAssertEqual(trip.stopPoints[1].stop?.address, "Ramblas, Barcelona")
                 XCTAssertNotNil(trip.stopPoints[2].stop)
                 XCTAssertNotNil(trip.stopPoints[3].stop)
                 XCTAssertNotNil(trip.stopPoints[4].stop)

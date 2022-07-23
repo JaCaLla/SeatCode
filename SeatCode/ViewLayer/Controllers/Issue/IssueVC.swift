@@ -4,8 +4,9 @@
 //
 //  Created by Javier Calatrava on 21/7/22.
 //
-import UIKit
+
 import JGProgressHUD
+import UIKit
 
 protocol IssueVCProtocol: AnyObject {
     func presentActivityIndicator()
@@ -28,16 +29,16 @@ class IssueVC: UIViewController {
     private let hud = JGProgressHUD()
 
     // MARK: - Constructor/Initializer
-    public static func instantiate(presenter: IssuePresenterProtocol/* = IssuePresenter(), issueVM: IssueVM*/) -> IssueVC {
+    public static func instantiate(presenter: IssuePresenterProtocol) -> IssueVC {
         let storyboard = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
-        guard let issuesVC = storyboard.instantiateViewController(withIdentifier: String(describing: IssueVC.self)) as? IssueVC else {
+        let identifier = String(describing: IssueVC.self)
+        guard let issuesVC = storyboard.instantiateViewController(withIdentifier: identifier) as? IssueVC else {
             return IssueVC()
         }
         issuesVC.presenter = presenter
         presenter.set(issueVC: issuesVC)
         return issuesVC
     }
-
 
     // MARK: - Lifecycle
     override func viewDidLoad() {

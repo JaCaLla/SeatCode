@@ -14,7 +14,6 @@
 		5E5C0EE62889B09400B02643 /* IssuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE52889B09400B02643 /* IssuePresenter.swift */; };
 		5E5C0EE82889B0EB00B02643 /* IssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EE72889B0EB00B02643 /* IssueVC.swift */; };
 		5E5C0EEB2889B34A00B02643 /* ActionIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EEA2889B34A00B02643 /* ActionIssueTVC.swift */; };
-		5E5C0EEE2889B3A200B02643 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EED2889B3A200B02643 /* AppColors.swift */; };
 		5E5C0EF02889B3EF00B02643 /* AttributeIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EEF2889B3EF00B02643 /* AttributeIssueTVC.swift */; };
 		5E5C0EF22889B42F00B02643 /* AttributeIssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF12889B42F00B02643 /* AttributeIssueType.swift */; };
 		5E5C0EF42889B48900B02643 /* ReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0EF32889B48900B02643 /* ReportTVC.swift */; };
@@ -59,6 +58,16 @@
 		5E72528E28874EA60003963E /* TripsVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528D28874EA60003963E /* TripsVCMock.swift */; };
 		5E72529028874ECF0003963E /* TripsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72528F28874ECF0003963E /* TripsInteractorMock.swift */; };
 		5E725292288753040003963E /* ErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725291288753040003963E /* ErrorAPI.swift */; };
+		5EC9ACC7288AC15C004BCA36 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACC6288AC15C004BCA36 /* FormView.swift */; };
+		5EC9ACC9288AC210004BCA36 /* IssueUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACC8288AC210004BCA36 /* IssueUI.swift */; };
+		5EC9ACD2288AC769004BCA36 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACD1288AC769004BCA36 /* ActionCell.swift */; };
+		5EC9ACD4288AC82E004BCA36 /* FormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACD3288AC82E004BCA36 /* FormPresenter.swift */; };
+		5EC9ACD7288ACADC004BCA36 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACD6288ACADC004BCA36 /* KeyboardFollower.swift */; };
+		5EC9ACD9288ACC85004BCA36 /* FormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACD8288ACC85004BCA36 /* FormInteractor.swift */; };
+		5EC9ACDB288AEF96004BCA36 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACDA288AEF96004BCA36 /* TextInputCell.swift */; };
+		5EC9ACDD288AFA06004BCA36 /* DateInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACDC288AFA06004BCA36 /* DateInputCell.swift */; };
+		5EC9ACDF288B00A2004BCA36 /* MultilineInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACDE288B00A2004BCA36 /* MultilineInputCell.swift */; };
+		5EC9ACE3288B196E004BCA36 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9ACE2288B196E004BCA36 /* FieldValidator.swift */; };
 		5EDEC7EA2887E6E400CF8239 /* PointAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7E92887E6E400CF8239 /* PointAPI.swift */; };
 		5EDEC7EC2887E8A300CF8239 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7EB2887E8A300CF8239 /* StopPoint.swift */; };
 		5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDEC7ED2887F2A600CF8239 /* TripMap.swift */; };
@@ -104,7 +113,6 @@
 		5E5C0EE52889B09400B02643 /* IssuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenter.swift; sourceTree = "<group>"; };
 		5E5C0EE72889B0EB00B02643 /* IssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVC.swift; sourceTree = "<group>"; };
 		5E5C0EEA2889B34A00B02643 /* ActionIssueTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIssueTVC.swift; sourceTree = "<group>"; };
-		5E5C0EED2889B3A200B02643 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		5E5C0EEF2889B3EF00B02643 /* AttributeIssueTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueTVC.swift; sourceTree = "<group>"; };
 		5E5C0EF12889B42F00B02643 /* AttributeIssueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueType.swift; sourceTree = "<group>"; };
 		5E5C0EF32889B48900B02643 /* ReportTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
@@ -153,6 +161,16 @@
 		5E72528D28874EA60003963E /* TripsVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVCMock.swift; sourceTree = "<group>"; };
 		5E72528F28874ECF0003963E /* TripsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsInteractorMock.swift; sourceTree = "<group>"; };
 		5E725291288753040003963E /* ErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAPI.swift; sourceTree = "<group>"; };
+		5EC9ACC6288AC15C004BCA36 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		5EC9ACC8288AC210004BCA36 /* IssueUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueUI.swift; sourceTree = "<group>"; };
+		5EC9ACD1288AC769004BCA36 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		5EC9ACD3288AC82E004BCA36 /* FormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresenter.swift; sourceTree = "<group>"; };
+		5EC9ACD6288ACADC004BCA36 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
+		5EC9ACD8288ACC85004BCA36 /* FormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInteractor.swift; sourceTree = "<group>"; };
+		5EC9ACDA288AEF96004BCA36 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
+		5EC9ACDC288AFA06004BCA36 /* DateInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputCell.swift; sourceTree = "<group>"; };
+		5EC9ACDE288B00A2004BCA36 /* MultilineInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineInputCell.swift; sourceTree = "<group>"; };
+		5EC9ACE2288B196E004BCA36 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		5EDEC7E92887E6E400CF8239 /* PointAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAPI.swift; sourceTree = "<group>"; };
 		5EDEC7EB2887E8A300CF8239 /* StopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		5EDEC7ED2887F2A600CF8239 /* TripMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMap.swift; sourceTree = "<group>"; };
@@ -244,14 +262,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		5E5C0EEC2889B38E00B02643 /* Stytles */ = {
-			isa = PBXGroup;
-			children = (
-				5E5C0EED2889B3A200B02643 /* AppColors.swift */,
-			);
-			path = Stytles;
-			sourceTree = "<group>";
-		};
 		5E7251F62886E7470003963E = {
 			isa = PBXGroup;
 			children = (
@@ -320,7 +330,6 @@
 		5E72523C2886ED350003963E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5E5C0EEC2889B38E00B02643 /* Stytles */,
 				5E72520B2886E7480003963E /* Assets.xcassets */,
 				5E72528628873D590003963E /* Localizable.strings */,
 				5E72523D2886ED350003963E /* R.Swift */,
@@ -437,6 +446,7 @@
 		5E7252582886FA970003963E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EC9ACC5288AC13C004BCA36 /* Form */,
 				5E5C0EDE2889A23B00B02643 /* Issue */,
 				5E72525D2886FC1B0003963E /* Trips */,
 			);
@@ -449,7 +459,6 @@
 				5E72527B2887251E0003963E /* Views */,
 				5E72525E2886FC9E0003963E /* TripsVC.swift */,
 				5E72527E2887259B0003963E /* TripVM.swift */,
-				5EDEC7ED2887F2A600CF8239 /* TripMap.swift */,
 				5E72526E28871DF50003963E /* TripsPresenter.swift */,
 				5E7252612886FD860003963E /* TripsInteractor.swift */,
 			);
@@ -507,6 +516,7 @@
 		5E72527B2887251E0003963E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5EDEC7ED2887F2A600CF8239 /* TripMap.swift */,
 				5E72527C2887252B0003963E /* TripList.swift */,
 				5E725280288727030003963E /* TripListCell.swift */,
 				5EDEC7F7288849DF00CF8239 /* PinMap */,
@@ -520,6 +530,39 @@
 				5E72528928873DF50003963E /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EC9ACC5288AC13C004BCA36 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				5EC9ACD5288ACAC5004BCA36 /* Modifiers */,
+				5EC9ACCA288AC52B004BCA36 /* Views */,
+				5EC9ACC6288AC15C004BCA36 /* FormView.swift */,
+				5EC9ACC8288AC210004BCA36 /* IssueUI.swift */,
+				5EC9ACD3288AC82E004BCA36 /* FormPresenter.swift */,
+				5EC9ACD8288ACC85004BCA36 /* FormInteractor.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		5EC9ACCA288AC52B004BCA36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5EC9ACDA288AEF96004BCA36 /* TextInputCell.swift */,
+				5EC9ACE2288B196E004BCA36 /* FieldValidator.swift */,
+				5EC9ACD1288AC769004BCA36 /* ActionCell.swift */,
+				5EC9ACDC288AFA06004BCA36 /* DateInputCell.swift */,
+				5EC9ACDE288B00A2004BCA36 /* MultilineInputCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5EC9ACD5288ACAC5004BCA36 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				5EC9ACD6288ACADC004BCA36 /* KeyboardFollower.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		5EDEC7F7288849DF00CF8239 /* PinMap */ = {
@@ -587,6 +630,7 @@
 			buildPhases = (
 				6E38ECD47DBB0524031E7463 /* [CP] Check Pods Manifest.lock */,
 				5E7252322886E9130003963E /* R.Swift */,
+				5E156C8D288BD13E00210C18 /* SwiftLint */,
 				5E7251FB2886E7470003963E /* Sources */,
 				5E7251FC2886E7470003963E /* Frameworks */,
 				5E7251FD2886E7470003963E /* Resources */,
@@ -713,6 +757,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5E156C8D288BD13E00210C18 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config .swiftlint.yml\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5E7252322886E9130003963E /* R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -841,8 +903,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72526F28871DF50003963E /* TripsPresenter.swift in Sources */,
+				5EC9ACD4288AC82E004BCA36 /* FormPresenter.swift in Sources */,
 				5E7252542886F9F60003963E /* StartUpAppSequencer.swift in Sources */,
 				5E7252642886FDE90003963E /* DataManager.swift in Sources */,
+				5EC9ACD7288ACADC004BCA36 /* KeyboardFollower.swift in Sources */,
 				5E725283288729BB0003963E /* OriginDestinationAPI.swift in Sources */,
 				5E5C0EF02889B3EF00B02643 /* AttributeIssueTVC.swift in Sources */,
 				5E5C0EE02889A27000B02643 /* IssueCoordinator.swift in Sources */,
@@ -872,21 +936,28 @@
 				5E5C0EF22889B42F00B02643 /* AttributeIssueType.swift in Sources */,
 				5E7252502886F9BE0003963E /* ConcurrentOperation.swift in Sources */,
 				5E7252432886EFA30003963E /* APIManager.swift in Sources */,
+				5EC9ACDB288AEF96004BCA36 /* TextInputCell.swift in Sources */,
 				5EDEC7F62888352800CF8239 /* PopUpAnnotation.swift in Sources */,
 				5E725292288753040003963E /* ErrorAPI.swift in Sources */,
 				5E72528A28873DF50003963E /* StringExtension.swift in Sources */,
 				5EDEC7FE28889B9500CF8239 /* RealmConfig.swift in Sources */,
 				5EDEC7EC2887E8A300CF8239 /* StopPoint.swift in Sources */,
-				5E5C0EEE2889B3A200B02643 /* AppColors.swift in Sources */,
+				5EC9ACC7288AC15C004BCA36 /* FormView.swift in Sources */,
 				5E5C0EFA288A6A8600B02643 /* StopAPI.swift in Sources */,
 				5EDEC80328889C7C00CF8239 /* IssueDB.swift in Sources */,
+				5EC9ACDD288AFA06004BCA36 /* DateInputCell.swift in Sources */,
+				5EC9ACC9288AC210004BCA36 /* IssueUI.swift in Sources */,
 				5E5C0EF62889B4BB00B02643 /* DateSelectorTVC.swift in Sources */,
+				5EC9ACDF288B00A2004BCA36 /* MultilineInputCell.swift in Sources */,
 				5E5C0EEB2889B34A00B02643 /* ActionIssueTVC.swift in Sources */,
 				5E7252052886E7470003963E /* SceneDelegate.swift in Sources */,
 				5EDEC7EE2887F2A600CF8239 /* TripMap.swift in Sources */,
 				5E72528528872AFA0003963E /* OriginDestination.swift in Sources */,
 				5E5C0EE42889AFC400B02643 /* IssueInteractor.swift in Sources */,
+				5EC9ACD2288AC769004BCA36 /* ActionCell.swift in Sources */,
+				5EC9ACE3288B196E004BCA36 /* FieldValidator.swift in Sources */,
 				5E5C0EF82889B52C00B02643 /* IssueView.swift in Sources */,
+				5EC9ACD9288ACC85004BCA36 /* FormInteractor.swift in Sources */,
 				5E72523F2886ED350003963E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

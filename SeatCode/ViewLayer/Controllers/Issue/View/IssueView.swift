@@ -27,11 +27,15 @@ enum PersonDetailViewOptions: Int {
         return PersonDetailViewOptions.allValuesEditMode[index]
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, issueVM: IssueVM, personDetailView: IssueView) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath,
+                   issueVM: IssueVM,
+                   personDetailView: IssueView) -> UITableViewCell {
         switch self {
         case .name, .surename, .email, .phone:
+            let identifier = R.reuseIdentifier.attributeIssueTVC.identifier
             guard let attributeIssueTVC: AttributeIssueTVC =
-                tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.attributeIssueTVC.identifier) as? AttributeIssueTVC,
+                tableView.dequeueReusableCell(withIdentifier: identifier) as? AttributeIssueTVC,
                 let attributePersonType = getAttributePersonType(issueVM: issueVM) else { return UITableViewCell() }
             attributeIssueTVC.set(attributePersonType: attributePersonType)
             attributeIssueTVC.onEmailValueChanged = personDetailView.onEmailValueChanged
@@ -40,19 +44,22 @@ enum PersonDetailViewOptions: Int {
             attributeIssueTVC.onPhoneValueChanged = personDetailView.onPhoneValueChanged
             return attributeIssueTVC
         case .timestamp:
-            guard let dateSelectorTVC: DateSelectorTVC = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.dateSelectorTVC.identifier) as? DateSelectorTVC,
+            let idientifier = R.reuseIdentifier.dateSelectorTVC.identifier
+            guard let dateSelectorTVC: DateSelectorTVC = tableView.dequeueReusableCell(withIdentifier: idientifier) as? DateSelectorTVC,
                 let attributePersonType = getAttributePersonType(issueVM: issueVM) else { return UITableViewCell() }
             dateSelectorTVC.onTimestampValueChanged = personDetailView.onTimestampValueChanged
             dateSelectorTVC.set(attributePersonType: attributePersonType)
             return dateSelectorTVC
         case .report:
-            guard let reportTVC: ReportTVC = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.reportTVC.identifier) as? ReportTVC,
+            let identifier = R.reuseIdentifier.reportTVC.identifier
+            guard let reportTVC: ReportTVC = tableView.dequeueReusableCell(withIdentifier: identifier) as? ReportTVC,
                 let attributePersonType = getAttributePersonType(issueVM: issueVM) else { return UITableViewCell() }
             reportTVC.onReportValueChanged = personDetailView.onReportValueChanged
             reportTVC.set(attributePersonType: attributePersonType)
             return reportTVC
         case .deleteAction:
-            guard let actionIssueTVC: ActionIssueTVC = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.actionIssueTVC.identifier) as? ActionIssueTVC else { return UITableViewCell() }
+            let identifier = R.reuseIdentifier.actionIssueTVC.identifier
+            guard let actionIssueTVC: ActionIssueTVC = tableView.dequeueReusableCell(withIdentifier: identifier) as? ActionIssueTVC else { return UITableViewCell() }
             actionIssueTVC.onSaveAction = {
                 personDetailView.onSaveAction()
             }
@@ -87,7 +94,7 @@ class IssueView: UITableView {
     // MARK: - Private attributes
     private var issueVM: IssueVM?
 
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupView()
@@ -102,7 +109,6 @@ class IssueView: UITableView {
     // MARK: - Internal/Private
     func setupView() {
 
-        //self.backgroundColor = AppColors.PersonDetail.background
         self.dataSource = self
         self.tableFooterView = UIView()
     }
@@ -128,7 +134,4 @@ extension IssueView: UITableViewDataSource {
                                                  issueVM: upwIssueVM,
                                                  personDetailView: self)
     }
-
-
-
 }

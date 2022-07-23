@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import UIKit
 import JGProgressHUD
+import UIKit
 
 protocol TripsVCProtocol: AnyObject {
     func presentActivityIndicator()
@@ -23,9 +23,9 @@ class TripsVC: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var tripList: TripList!
     @IBOutlet weak var tripMap: TripMap!
-    
+
     // MARK: - Callback
-    var onGetIssue: (Issue) -> Void = { _ in /* Default empty block */}
+    var onGetIssue: (Issue) -> Void = { _ in /* Default empty block */ }
 
     // MARK: - Private attributes
     private let hud = JGProgressHUD()
@@ -58,11 +58,10 @@ class TripsVC: UIViewController {
 
     // MARK: - Private methods
     func setupViewController() {
-        title = R.string.localizable.trips_title.key.localized 
+        title = R.string.localizable.trips_title.key.localized
         hud.textLabel.text = R.string.localizable.trips_loading.key.localized
-        
+
         tripList.onSelect = { [weak self] tripVM in
-            //self?.tripMap.set(tripVM: tripVM)
             Task {
                 await self?.presenter.fetchStops(tripVM: tripVM)
             }
@@ -85,7 +84,7 @@ extension TripsVC: TripsVCProtocol {
     func removeActivityIndicator() {
         hud.dismiss(animated: true)
     }
-    
+
     func presentAlertError(message: String) {
         let alert = UIAlertController(title: R.string.localizable.issue_alert_title.key.localized,
                                       message: message,
@@ -99,11 +98,11 @@ extension TripsVC: TripsVCProtocol {
     func presentFetchedTrips(tripsVM: [TripVM]) {
         tripList.set(tripsVM: tripsVM)
     }
-    
+
     func presentStopPoints(tripVM: TripVM) {
         tripMap.set(tripVM: tripVM)
     }
-    
+
     func onGetIssue(issue: Issue) {
         onGetIssue(issue)
     }

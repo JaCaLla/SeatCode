@@ -17,7 +17,7 @@ struct Trip {
     let route: String
     var stopPoints: [StopPoint]
     let hasIssue: Bool
-    
+
     // MARK: - Initializer/Constructor
     init(tripAPI: TripAPI, hasIssue: Bool) {
         self.status = tripAPI.status
@@ -31,17 +31,17 @@ struct Trip {
         self.hasIssue = hasIssue
 
     }
-    
+
     mutating func set(stopPoints: [StopPoint]) {
         self.stopPoints = stopPoints
     }
-    
+
     // MARK: - Private/Internal methods
     private static func buildPointsTrip(tripAPI: TripAPI) -> [StopPoint] {
         var points: [StopPoint] = []
         points.append(StopPoint(pointAPI: tripAPI.origin.point))
         points.append(contentsOf: tripAPI.stops.compactMap({
-            guard let uwpPoint = $0.point else { return nil}
+            guard let uwpPoint = $0.point else { return nil }
             return StopPoint(pointAPI: uwpPoint, id: $0.id)
         }))
         points.append(StopPoint(pointAPI: tripAPI.destination.point))

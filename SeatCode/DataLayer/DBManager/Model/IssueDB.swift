@@ -19,7 +19,6 @@ class IssueDB: Object {
     @objc dynamic var phone: String = ""
     @objc dynamic var endTime: String = ""
 
-
     // MARK: - Initializers
     convenience init(route: String,
                      name: String,

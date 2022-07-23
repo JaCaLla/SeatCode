@@ -21,12 +21,12 @@ class DataManagerUT: XCTestCase {
         // Given
         let apiManagerMock = APIManagerMock()
         sut = DataManager(apiManager: apiManagerMock)
-        
+
         let expectation = expectation(description: "fetchTrips")
         // When
         let result = await sut.fetchTrips()
         switch result {
-        case .success( _):
+        case .success:
             // Then
             XCTAssertEqual(apiManagerMock.fetchTripsCounter, 1)
         default:
@@ -35,7 +35,7 @@ class DataManagerUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
-    
+
     func testFetchTrips() async throws {
 
         let expectation = expectation(description: "fetchTrips")
@@ -61,7 +61,7 @@ class DataManagerUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
-    
+
     func testfetchStops() async throws {
         let expectation = expectation(description: "fetchTrips")
         // Given
@@ -78,14 +78,14 @@ class DataManagerUT: XCTestCase {
                 XCTAssertNotNil(tripUpdated)
                 XCTAssertEqual(tripUpdated.stopPoints[0].stop, trip.stopPoints[0].stop)
                 XCTAssertNotNil(tripUpdated.stopPoints[1].stop)
-                XCTAssertEqual(tripUpdated.stopPoints[1].stop?.userName,"Manuel Gomez")
-                XCTAssertEqual(tripUpdated.stopPoints[1].stop?.address,"Ramblas, Barcelona")
+                XCTAssertEqual(tripUpdated.stopPoints[1].stop?.userName, "Manuel Gomez")
+                XCTAssertEqual(tripUpdated.stopPoints[1].stop?.address, "Ramblas, Barcelona")
                 XCTAssertNotNil(tripUpdated.stopPoints[2].stop)
                 XCTAssertNotNil(tripUpdated.stopPoints[3].stop)
                 XCTAssertNotNil(tripUpdated.stopPoints[4].stop)
                 XCTAssertEqual(tripUpdated.stopPoints[5].stop, trip.stopPoints[0].stop)
             default:
-                              XCTFail("Unexpected response")
+                XCTFail("Unexpected response")
             }
         default:
             XCTFail("Unexpected response")
@@ -93,7 +93,7 @@ class DataManagerUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
-    
+
     func testCreateIssueAsync() async {
         // Given
         let issue = Issue(route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
@@ -109,7 +109,7 @@ class DataManagerUT: XCTestCase {
         // When
         await sut.create(issue: issue)
         // Then
-        let issueFetched  = await sut.getIssue(endTime: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
+        let issueFetched = await sut.getIssue(endTime: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
         XCTAssertNotNil(issueFetched)
         XCTAssertEqual(issueFetched?.route, "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
         XCTAssertEqual(issueFetched?.name, "Sara")
@@ -134,13 +134,13 @@ class DataManagerUT: XCTestCase {
             let tripsWithIssues = trips.filter({ $0.hasIssue })
             XCTAssertEqual(tripsWithIssues.count, 0)
         case .failure:
-            XCTFail()
+            XCTFail("testGetRouteWOIssue failed")
 
         }
         asyncExpectation.fulfill()
         await self.waitForExpectations(timeout: 2.0, handler: nil)
     }
-    
+
     func testFetchIssueWhenExists() async {
         // Given
         let issueDB = IssueDB(route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
@@ -163,11 +163,11 @@ class DataManagerUT: XCTestCase {
         XCTAssertEqual(issue?.report, "blah, blah")
         XCTAssertEqual(issue?.phone, "123456789")
         XCTAssertEqual(issue?.endTime, "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
-        
+
         asyncExpectation.fulfill()
         await self.waitForExpectations(timeout: 2.0, handler: nil)
     }
-    
+
     func testFetchIssueWhenDoesNotExists() async {
         // Given
         let issueDB = IssueDB(route: "1",
@@ -185,7 +185,7 @@ class DataManagerUT: XCTestCase {
         asyncExpectation.fulfill()
         await self.waitForExpectations(timeout: 2.0, handler: nil)
     }
-    
+
     func test_getIssuesCountAsync() async {
 
         XCTAssertEqual(sut.getIssuesCount(), 0)

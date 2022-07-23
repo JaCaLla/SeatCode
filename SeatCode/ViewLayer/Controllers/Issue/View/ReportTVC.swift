@@ -32,7 +32,7 @@ class ReportTVC: UITableViewCell {
         self.refreshView()
     }
 
-    //  MARK: - Private/Internal methods
+    // MARK: - Private/Internal methods
     private func setupView() {
         self.selectionStyle = .none
         self.reportTextView.delegate = self

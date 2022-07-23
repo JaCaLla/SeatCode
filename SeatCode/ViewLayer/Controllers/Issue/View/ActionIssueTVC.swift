@@ -20,7 +20,6 @@ class ActionIssueTVC: UITableViewCell {
 
     @IBOutlet weak var saveButton: UIButton!
 
-
     // MARK: - Callbacks
     var onSaveAction: () -> Void = { /* Default empty block */ }
 
@@ -31,8 +30,7 @@ class ActionIssueTVC: UITableViewCell {
         }
     }
 
-
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupView()
@@ -41,11 +39,11 @@ class ActionIssueTVC: UITableViewCell {
     // MARK: - Internal/Private
     func setupView() {
 
-        self.backgroundColor = AppColors.PersonDetail.background
+        self.backgroundColor = R.color.colorWhite()
         self.selectionStyle = .none
 
-        saveButton.titleLabel?.textColor = AppColors.PersonDetail.fontColor
-        saveButton.backgroundColor = AppColors.PersonDetail.buttonBackgroundColor
+        saveButton.titleLabel?.textColor = R.color.colorBlack()
+        saveButton.backgroundColor = R.color.colorRed()
         saveButton.setTitle(actionPersonType.getText(), for: .normal)
         saveButton.layer.cornerRadius = 5.0
 

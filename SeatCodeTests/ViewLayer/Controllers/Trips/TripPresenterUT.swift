@@ -8,7 +8,7 @@
 import XCTest
 
 class TripsPresenterUT: XCTestCase {
-    
+
     var sut: TripsPresenterProtocol!
 
     override func setUpWithError() throws {
@@ -30,10 +30,10 @@ class TripsPresenterUT: XCTestCase {
         let expectation = expectation(description: "testFetchTripsWithMock")
         // When
         await sut.fetchTrips()
-        
+
         // Then
         XCTAssertEqual(tripsInteractorMock.fetchTripsCount, 1)
-        
+
         expectation.fulfill()
         await waitForExpectations(timeout: 10)
     }

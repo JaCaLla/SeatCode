@@ -2709,3 +2709,7 @@ Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h
 Pods/Target Support Files/RealmSwift/RealmSwift.debug.xcconfig
 Pods/Target Support Files/RealmSwift/RealmSwift.modulemap
 Pods/Target Support Files/RealmSwift/RealmSwift.release.xcconfig
+Pods/SwiftLint/LICENSE
+Pods/SwiftLint/swiftlint
+Pods/Target Support Files/SwiftLint/SwiftLint.debug.xcconfig
+Pods/Target Support Files/SwiftLint/SwiftLint.release.xcconfig

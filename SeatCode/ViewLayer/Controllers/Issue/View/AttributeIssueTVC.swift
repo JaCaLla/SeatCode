@@ -9,7 +9,7 @@ import UIKit
 
 class AttributeIssueTVC: UITableViewCell {
 
-    // MARKK : - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var txtAttributeValue: UITextField!
     @IBOutlet weak var lblAttributeName: UILabel!
 
@@ -18,7 +18,7 @@ class AttributeIssueTVC: UITableViewCell {
     var onNameValueChanged: (String) -> Void = { _ in /* Default empty block*/ }
     var onSurenameValueChanged: (String) -> Void = { _ in /* Default empty block*/ }
     var onPhoneValueChanged: (String) -> Void = { _ in /* Default empty block*/ }
-    
+
     private var attributePersonType: AttributeIssueType?
 
     // MARK: - Lifecycle
@@ -43,7 +43,7 @@ class AttributeIssueTVC: UITableViewCell {
 
     }
 
-    //  MARK: - Private/Internal methods
+    // MARK: - Private/Internal methods
     private func setupView() {
         self.selectionStyle = .none
         txtAttributeValue.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
@@ -51,7 +51,7 @@ class AttributeIssueTVC: UITableViewCell {
     }
 
     private func refreshView() {
-        lblAttributeName.textColor = AppColors.PersonDetail.fontColor
+        lblAttributeName.textColor = R.color.colorBlack()
         lblAttributeName.text = attributePersonType?.getText()
 
         txtAttributeValue.text = attributePersonType?.getValue()
