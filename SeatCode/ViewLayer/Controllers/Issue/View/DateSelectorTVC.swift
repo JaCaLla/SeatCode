@@ -24,19 +24,19 @@ class DateSelectorTVC: UITableViewCell {
         super.awakeFromNib()
         setupView()
     }
-    
+
     // MARK: - public methods
     func set(attributePersonType: AttributeIssueType) {
 
         self.attributePersonType = attributePersonType
         self.refreshView()
     }
-    
+
     @objc func datePickerChanged(picker: UIDatePicker) {
         self.onTimestampValueChanged(picker.date)
     }
 
-    //  MARK: - Private/Internal methods
+    // MARK: - Private/Internal methods
     private func setupView() {
         self.selectionStyle = .none
         timeStampPicker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)

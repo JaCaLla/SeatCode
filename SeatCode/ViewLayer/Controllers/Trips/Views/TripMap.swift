@@ -5,13 +5,12 @@
 //  Created by Javier Calatrava on 20/7/22.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
 class TripMap: MKMapView {
 
     // MARK: - Callbacks
-
 
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -21,18 +20,15 @@ class TripMap: MKMapView {
 
     // MARK: - Public methods
     func set(tripVM: TripVM) {
-        isHidden = false
 
         removeAnnotations(self.annotations)
         addAnnotations(tripVM.stopPoints)
         updatePolyline(tripVM: tripVM)
     }
 
-
     // MARK: - Private methods
     private func setupView() {
         delegate = self
-        isHidden = true
     }
 
     private func updatePolyline(tripVM: TripVM) {

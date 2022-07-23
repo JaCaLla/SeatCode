@@ -17,7 +17,7 @@ class IssueDBUT: XCTestCase {
                               surename: "df",
                               email: "asdf@gmail.com",
                               timestamp: 123,
-                              report:"blah, blah",
+                              report: "blah, blah",
                               phone: "123456789",
                               endTime: "a")
         // Then
@@ -29,9 +29,9 @@ class IssueDBUT: XCTestCase {
         XCTAssertEqual(issueDB.report, "blah, blah")
         XCTAssertEqual(issueDB.phone, "123456789")
         XCTAssertEqual(issueDB.endTime, "a")
-        
+
     }
-    
+
     func testConstructorWhenIssue() {
         // Given
         // When
@@ -40,7 +40,7 @@ class IssueDBUT: XCTestCase {
                           surename: "df",
                           email: "asdf@gmail.com",
                           timestamp: 123,
-                          report:"blah, blah",
+                          report: "blah, blah",
                           phone: "123456789",
                           endTime: "a")
         let issueDB = IssueDB(issue: issue)
@@ -53,6 +53,6 @@ class IssueDBUT: XCTestCase {
         XCTAssertEqual(issueDB.report, "blah, blah")
         XCTAssertEqual(issueDB.phone, "123456789")
         XCTAssertEqual(issueDB.endTime, "a")
-        
+
     }
 }

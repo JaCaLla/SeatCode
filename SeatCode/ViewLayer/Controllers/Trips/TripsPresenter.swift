@@ -14,12 +14,12 @@ protocol TripsPresenterProtocol: AnyObject {
 }
 
 internal final class TripsPresenter {
- 
+
     // MARK: - Private attributes
     private var interactor: TripsInteractorProtocol
     private weak var view: TripsVCProtocol?
     private var trips: [Trip]?
-    
+
     // MARK: - Constructor/Initializer
     init(interactor: TripsInteractorProtocol = TripsInteractor()) {
         self.interactor = interactor
@@ -28,29 +28,29 @@ internal final class TripsPresenter {
 
 // MARK: - TripsPresenterProtocol
 extension TripsPresenter: TripsPresenterProtocol {
-    
+
     func set(tripsVC: TripsVCProtocol) {
         self.view = tripsVC
     }
-    
+
     func fetchTrips() async {
         Task { @MainActor in
             view?.presentActivityIndicator()
         }
         let result = await interactor.fetchTrips()
         Task { @MainActor in
-           view?.removeActivityIndicator()
+            view?.removeActivityIndicator()
             switch result {
             case .success(let trips):
                 self.trips = trips
-                let tripsVM: [TripVM] = trips.map({ TripVM(trip: $0)})
-                    view?.presentFetchedTrips(tripsVM: tripsVM)
+                let tripsVM: [TripVM] = trips.map({ TripVM(trip: $0) })
+                view?.presentFetchedTrips(tripsVM: tripsVM)
             case .failure:
                 view?.presentAlertError(message: R.string.localizable.trips_alert_message_trips.key.localized)
             }
         }
     }
-    
+
     func fetchStops(tripVM: TripVM) async {
         guard let trips = trips,
             let index = trips.firstIndex(where: { $0.endTime == tripVM.endTime }) else { return }
@@ -69,21 +69,19 @@ extension TripsPresenter: TripsPresenterProtocol {
             }
         }
     }
-    
+
     func fetchIssue(endTime: String) async {
         view?.presentActivityIndicator()
         let issue = await interactor.getIssue(endTime: endTime)
         view?.removeActivityIndicator()
         let uwpIssue = Issue(route: issue?.route ?? "",
                              name: issue?.name ?? "",
-                                             surename: issue?.surename ?? "",
-                                             email: issue?.email ?? "",
-                                             timestamp: issue?.timestamp ?? -1,
-                                             report: issue?.report ?? "",
-                                             phone: issue?.phone ?? "",
+                             surename: issue?.surename ?? "",
+                             email: issue?.email ?? "",
+                             timestamp: issue?.timestamp ?? -1,
+                             report: issue?.report ?? "",
+                             phone: issue?.phone ?? "",
                              endTime: endTime)
         view?.onGetIssue(issue: uwpIssue)
     }
 }
-
-

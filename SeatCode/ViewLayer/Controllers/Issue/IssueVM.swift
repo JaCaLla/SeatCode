@@ -8,21 +8,21 @@
 import Foundation
 
 struct IssueVM {
-    var route:String = ""
-    var name:String = ""
-    var surename:String = ""
-    var email:String = ""
+    var route: String = ""
+    var name: String = ""
+    var surename: String = ""
+    var email: String = ""
     var timestamp: Date = Date()
     var report: String = ""
     var phone: String = ""
-    
+
     // MARK: - Constructor/Initializers
-    init(route:String,
-         name:String,
-         surename:String,
-         email:String,
+    init(route: String,
+         name: String,
+         surename: String,
+         email: String,
          timestamp: Date,
-         report:String,
+         report: String,
          phone: String) {
         self.route = route
         self.name = name
@@ -32,7 +32,7 @@ struct IssueVM {
         self.report = report
         self.phone = phone
     }
-    
+
     init(issue: Issue) {
         self.init(route: issue.route,
                   name: issue.name,
@@ -40,6 +40,6 @@ struct IssueVM {
                   email: issue.email,
                   timestamp: issue.timestamp < 0 ? Date() : Date(timeIntervalSince1970: TimeInterval(issue.timestamp)),
                   report: issue.report,
-                  phone:issue.phone)
+                  phone: issue.phone)
     }
 }

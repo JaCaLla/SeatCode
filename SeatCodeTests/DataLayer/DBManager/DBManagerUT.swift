@@ -16,23 +16,20 @@ class DBManagerUT: XCTestCase {
 
     // MARK: - Issue
     func testDBIsEmptyAtTheBeggining() {
-        //Given
-        //When
-        //Then
         XCTAssertEqual(currentApp.dbManager.getIssues().count, 0)
     }
-    
+
     func testCreateIssueAsync() async {
-        //Given
+        // Given
         let expectation = expectation(description: "fetchTrips")
-        //When
+        // When
         let issueDB = IssueDB(route: "1", name: "Sara", surename: "Gutierrez", email: "sagu@mailinator.com", timestamp: 123, report: "blah, blah", phone: "123456789", endTime: "1")
         await currentApp.dbManager.create(issueDB: issueDB)
-        //Then
+        // Then
         let count = await currentApp.dbManager.getIssues().count
         XCTAssertEqual(count, 1)
         guard let issueDBStored = await currentApp.dbManager.getIssues().first else {
-            XCTFail()
+            XCTFail("testCreateIssueAsync failed")
             return
         }
         XCTAssertEqual(issueDBStored.route, "1")
@@ -46,7 +43,7 @@ class DBManagerUT: XCTestCase {
         expectation.fulfill()
         await waitForExpectations(timeout: 1)
     }
-    
+
     func testUpdateIssueAsync() async {
 
         let issueDB = IssueDB(route: "1",
@@ -55,22 +52,22 @@ class DBManagerUT: XCTestCase {
                               email: "sagu@mailinator.com",
                               timestamp: 123,
                               report: "blah, blah",
-                              phone: "123456789",  endTime: "1")
+                              phone: "123456789", endTime: "1")
         await currentApp.dbManager.create(issueDB: issueDB)
-        //Given
+        // Given
         let issueDBNew = IssueDB(route: "1",
                                  name: "Juan",
                                  surename: "Sino",
                                  email: "jusi@mailinator.com",
                                  timestamp: 53,
                                  report: "plat, plat",
-                                 phone: "2222222222",  endTime: "1")
+                                 phone: "2222222222", endTime: "1")
         await currentApp.dbManager.create(issueDB: issueDBNew)
-        //When
+        // When
         let issues = await currentApp.dbManager.getIssues()
         XCTAssertEqual(issues.count, 1)
         guard let issueDBStored = issues.first else {
-            XCTFail()
+            XCTFail("testUpdateIssueAsync")
             return
         }
         XCTAssertEqual(issueDBStored.route, "1")

@@ -12,15 +12,15 @@ struct StopPoint {
     let latitude, longitude: Double
     let id: Int?
     var stop: Stop?
-    
+
     // MARK: - Initializer/Constructor
     init(pointAPI: PointAPI, id: Int? = nil) {
         self.latitude = pointAPI.latitude
         self.longitude = pointAPI.longitude
         self.id = id
     }
-    
-    //MARK: - Public methods
+
+    // MARK: - Public methods
     mutating func set(stop: Stop) {
         self.stop = stop
     }
@@ -30,24 +30,24 @@ extension StopPoint: Equatable {
     static func == (lhs: StopPoint, rhs: StopPoint) -> Bool {
         var continueCheck = true
         if lhs.id == nil && lhs.id == nil {
-            
+
         } else if let lhsId = lhs.id,
-           let rhsId = rhs.id {
+            let rhsId = rhs.id {
             continueCheck = continueCheck && lhsId == rhsId
         } else {
             return false
         }
         if lhs.id == nil && lhs.id == nil {
-            
+
         } else if let lhsStop = lhs.stop,
-           let rhsStop = rhs.stop {
+            let rhsStop = rhs.stop {
             continueCheck = continueCheck && lhsStop == rhsStop
         } else {
             return false
         }
-        
+
         return continueCheck &&
-        lhs.latitude == rhs.latitude &&
-        lhs.longitude == rhs.longitude
+            lhs.latitude == rhs.latitude &&
+            lhs.longitude == rhs.longitude
     }
 }

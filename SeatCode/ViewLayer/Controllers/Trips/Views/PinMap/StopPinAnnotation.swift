@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 class StopPinAnnotation: NSObject, MKAnnotation {
-    
+
     // MARK: - Private/Internal attributes
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     private var _title: String = String("")
@@ -30,7 +30,8 @@ class StopPinAnnotation: NSObject, MKAnnotation {
             return _title
         }
         set (value) {
-            self._title = value!
+            guard let value = value else { return }
+            self._title = value
         }
     }
 

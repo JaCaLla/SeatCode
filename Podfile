@@ -15,6 +15,9 @@ target 'SeatCode' do
   # Pod for persistence
   pod 'RealmSwift'
 
+ # Pod for improve quality code
+ pod 'SwiftLint'
+
   target 'SeatCodeTests' do
     inherit! :search_paths
     # Pods for testing

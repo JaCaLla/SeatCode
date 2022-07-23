@@ -17,12 +17,12 @@ enum AttributeIssueType {
 
     func getText() -> String {
         switch self {
-        case .name(_): return R.string.localizable.issue_name.key.localized
-        case .surename(_): return R.string.localizable.issue_surename.key.localized
-        case .email(_): return R.string.localizable.issue_email.key.localized
-        case .phone(_): return R.string.localizable.issue_phone.key.localized
-        case .timestamp(_): return R.string.localizable.issue_timestamp.key.localized
-        case .report(_): return R.string.localizable.issue_report.key.localized
+        case .name: return R.string.localizable.issue_name.key.localized
+        case .surename: return R.string.localizable.issue_surename.key.localized
+        case .email: return R.string.localizable.issue_email.key.localized
+        case .phone: return R.string.localizable.issue_phone.key.localized
+        case .timestamp: return R.string.localizable.issue_timestamp.key.localized
+        case .report: return R.string.localizable.issue_report.key.localized
         }
     }
 
@@ -32,36 +32,36 @@ enum AttributeIssueType {
         case .surename(let issueVM): return issueVM?.surename ?? ""
         case .email(let issueVM): return issueVM?.email ?? ""
         case .phone(let issueVM): return issueVM?.phone ?? ""
-        case .timestamp(_): return ""
+        case .timestamp: return ""
         case .report(let issueVM): return issueVM?.report ?? ""
         }
     }
 
     func onValueChanged(attributePersonTVC: AttributeIssueTVC, value: String) {
         switch self {
-        case .name(_): attributePersonTVC.onNameValueChanged(value)
-        case .surename(_): attributePersonTVC.onSurenameValueChanged(value)
-        case .email(_): attributePersonTVC.onEmailValueChanged(value)
-        case .phone(_): attributePersonTVC.onPhoneValueChanged(value)
-        case .timestamp(_), .report(_): return
+        case .name: attributePersonTVC.onNameValueChanged(value)
+        case .surename: attributePersonTVC.onSurenameValueChanged(value)
+        case .email: attributePersonTVC.onEmailValueChanged(value)
+        case .phone: attributePersonTVC.onPhoneValueChanged(value)
+        case .timestamp, .report: return
         }
     }
 
     func onValueChanged(reportTVC: ReportTVC, value: String) {
         switch self {
-        case .name(_): return
-        case .surename(_): return
-        case .email(_): return
-        case .phone(_): return
-        case .timestamp(_): return
-        case .report(_): reportTVC.onReportValueChanged(value)
+        case .name: return
+        case .surename: return
+        case .email: return
+        case .phone: return
+        case .timestamp: return
+        case .report: reportTVC.onReportValueChanged(value)
 
         }
     }
 
     func getDate() -> Date? {
         switch self {
-        case .name(_), .surename(_), .email(_), .report(_), .phone(_): return nil
+        case .name, .surename, .email, .report, .phone: return nil
         case .timestamp(let issueVM): return issueVM?.timestamp
         }
     }

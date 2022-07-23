@@ -9,12 +9,14 @@ PODS:
   - Realm/Headers (10.28.2)
   - RealmSwift (10.28.2):
     - Realm (= 10.28.2)
+  - SwiftLint (0.47.1)
 
 DEPENDENCIES:
   - JGProgressHUD
   - Polyline (~> 5.0)
   - R.swift (~> 5.0.3)
   - RealmSwift
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - R.swift.Library
     - Realm
     - RealmSwift
+    - SwiftLint
 
 SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
-PODFILE CHECKSUM: fab1f979007bd3cb5456e7dc3d871b07e15095ed
+PODFILE CHECKSUM: 0e8ec2dec39fbabea3c907d3d9dcb855a05f857a
 
 COCOAPODS: 1.11.3

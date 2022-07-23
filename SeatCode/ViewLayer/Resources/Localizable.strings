@@ -15,6 +15,9 @@
 "trips_alert_message_stops" = "It was not possible fetch trip stop points. Try another trip";
 "trips_alert_message_trips" = "It was not possible fetch any trip. Review your internet connection";
 
+"issue_coordinator_alert_title" = "Next screen";
+"issue_coordinator_alert_message" = "Choose technology you like?";
+
 "issue_title" = "Fill issue form";
 "issue_name" = "Name";
 "issue_surename" = "Surename";
@@ -25,6 +28,11 @@
 "issue_timestamp" = "Timestamp";
 "issue_alert_title" = "Look out!";
 "issue_alert_message" = "Name, Surename and email are mandatory!\n Report maximum length is 200! \n... check email format";
+"issue_error_empty" = "This field is empty!";
+"issue_error_email" = "This is wrong email format";
+"issue_error_phone" = "This is wrong phone format";
+"issue_error_report" = "Report maximum length is 200!";
+"issue_button_save" = "SAVE";
 
 "alert_continue" = "Continue";
 

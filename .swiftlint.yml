@@ -1,0 +1,81 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+  - SeatCode/ViewLayer/Resources/R.Swift/R.generated.swift
+
+analyzer_rules:
+  - unused_import
+
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - first_where
+  - force_unwrapping
+  - literal_expression_end_indentation
+  - multiline_function_chains
+  - multiline_parameters
+  - operator_usage_whitespace
+  - sorted_imports
+  - yoda_condition
+
+identifier_name:
+  excluded:
+    - id
+
+custom_rules:
+  avoid_vl_class_name:
+    included: ".*\\.swift"
+    name: "Class names with VL"
+    regex: class\s+VL.*
+    message: "Don't start the name of swift classes with VL"
+    severity: warning
+
+vertical_whitespace:
+  severity: error
+force_try:
+  severity: warning
+
+function_parameter_count:
+  warning: 8
+  error: 15
+
+cyclomatic_complexity:
+  warning: 15
+  error: 40
+
+function_body_length:
+  warning: 100
+  error: 200
+
+type_body_length:
+  warning: 600
+  error: 1000
+
+trailing_whitespace:
+  severity: error
+  
+nesting:
+    type_level: 3
+
+xctfail_message:
+  severity: error
+
+operator_usage_whitespace:
+  severity: error
+
+vertical_parameter_alignment:
+  severity: error
+
+comma:
+  severity: error
+
+trailing_newline:
+    severity: error
+
+opening_brace:
+    severity: error
+
+colon:
+    severity: error
+

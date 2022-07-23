@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IssueInteractorProtocol: AnyObject {
     func getIssue() -> IssueVM
@@ -19,47 +20,55 @@ protocol IssueInteractorProtocol: AnyObject {
 }
 
 internal final class IssueInteractor {
-    
+
     // MARK: - Internal/Private attributes
     var issue: Issue
-    
+
     // MARK: - Initializer constructor
     init(issue: Issue) {
         self.issue = issue
     }
 }
 
-//MARK: - IssueInteractorProtocol
+// MARK: - IssueInteractorProtocol
 extension IssueInteractor: IssueInteractorProtocol {
     func getIssue() -> IssueVM {
-      return IssueVM(issue: issue)
+        return IssueVM(issue: issue)
     }
-    
+
     func onNameValueChanged(value: String) {
         issue.name = value
     }
-    
+
     func onSurenameValueChanged(value: String) {
         issue.surename = value
     }
-    
+
     func onEmailValueChanged(value: String) {
         issue.email = value
     }
-    
+
     func onTimestampValueChanged(value: Date) {
         issue.timestamp = value.timeIntervalSince1970
     }
-    
+
     func onReportValueChanged(value: String) {
         issue.report = value
     }
-    
+
     func onPhoneValueChanged(value: String) {
         issue.phone = value
     }
-    
+
     func saveIssue() async {
         await currentApp.dataManager.create(issue: issue)
+        Task { @MainActor in
+            do {
+                try await UNUserNotificationCenter.current().requestAuthorization(options: .badge)
+                UIApplication.shared.applicationIconBadgeNumber = currentApp.dataManager.getIssuesCount()
+            } catch {
+
+            }
+        }
     }
 }

@@ -38,12 +38,12 @@ class APIManagerUT: XCTestCase {
 
         await waitForExpectations(timeout: 3)
     }
-    
+
     func testFetchStop() async throws {
 
         let expectation = expectation(description: "fetchTrips")
 
-        let result = await sut.fetchStop(id:1)
+        let result = await sut.fetchStop(id: 1)
 
         switch result {
         case .success(let stopAPI):
@@ -56,13 +56,13 @@ class APIManagerUT: XCTestCase {
 
         await waitForExpectations(timeout: 3)
     }
-    
+
     func testFetchStopsSequential() async throws {
 
         let expectation = expectation(description: "fetchTrips")
 
         let ids = Array(1...9)
-        let result = await sut.fetchStopsSeq(ids:ids)
+        let result = await sut.fetchStopsSeq(ids: ids)
 
         switch result {
         case .success(let stopsAPI):
@@ -92,7 +92,7 @@ class APIManagerUT: XCTestCase {
 
         await waitForExpectations(timeout: 5)
     }
-    
+
     func testMeasurePerfonace() async {
         let timeSeq = await timeElapsedInSecondsWhenRunningCode(operation: {
             do {
@@ -101,7 +101,7 @@ class APIManagerUT: XCTestCase {
                 XCTFail("failed testMeasurePerfonace")
             }
         })
-        
+
         let timePar = await timeElapsedInSecondsWhenRunningCode(operation: {
             do {
                 try await self.testFetchStopsParallel()
@@ -109,14 +109,12 @@ class APIManagerUT: XCTestCase {
                 XCTFail("failed testMeasurePerfonace")
             }
         })
-        
         XCTAssertTrue(timePar < timeSeq)
     }
-    
-    
-    func timeElapsedInSecondsWhenRunningCode(operation: () async -> ()) async -> Double {
+
+    func timeElapsedInSecondsWhenRunningCode(operation: () async -> Void) async -> Double {
         let startTime = CFAbsoluteTimeGetCurrent()
-         await operation()
+        await operation()
         let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
         return Double(timeElapsed)
     }

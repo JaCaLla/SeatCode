@@ -8,7 +8,7 @@
 import Foundation
 
 protocol APIManagerProtocol: AnyObject {
-   func fetchTrips() async -> Result<[TripAPI], ErrorAPI>
+    func fetchTrips() async -> Result<[TripAPI], ErrorAPI>
     func fetchStop(id: Int) async -> Result<StopAPI, ErrorAPI>
     func fetchStopsSeq(ids: [Int]) async -> Result<[Int: StopAPI], ErrorAPI>
     func fetchStopsPar(ids: [Int]) async -> Result<[Int: StopAPI], ErrorAPI>
@@ -21,18 +21,21 @@ internal final class APIManager: APIManagerProtocol {
     private let path = "/api/"
     private let decoder = JSONDecoder()
 
-
     // MARK: - APIManagerProtocol
     func fetchTrips() async -> Result<[TripAPI], ErrorAPI> {
-        let url = createURLFromParameters(parameters: [:], pathparam: "trips")
+        guard let url = createURLFromParameters(parameters: [:], pathparam: "trips") else {
+            return .failure(.badFormedURL)
+        }
         return await fetchAsync(url: url)
     }
-    
+
     func fetchStop(id: Int) async -> Result<StopAPI, ErrorAPI> {
-        let url = createURLFromParameters(parameters: [:], pathparam: "stops/\(id)")
+        guard let url = createURLFromParameters(parameters: [:], pathparam: "stops/\(id)") else {
+            return .failure(.badFormedURL)
+        }
         return await fetchAsync(url: url)
     }
-    
+
     func fetchStopsSeq(ids: [Int]) async -> Result<[Int: StopAPI], ErrorAPI> {
         var stopsAPI: [Int: StopAPI] = [:]
         for id in ids {
@@ -46,16 +49,16 @@ internal final class APIManager: APIManagerProtocol {
         }
         return .success(stopsAPI)
     }
-    
+
     func fetchStopsPar(ids: [Int]) async -> Result<[Int: StopAPI], ErrorAPI> {
-        let results : [Int: Result<StopAPI, ErrorAPI>] =
-        await withTaskGroup(of: (Int, Result<StopAPI, ErrorAPI>).self, body: { [self] group in
+        let results: [Int: Result<StopAPI, ErrorAPI>] =
+            await withTaskGroup(of: (Int, Result<StopAPI, ErrorAPI>).self, body: { [self] group in
             for id in ids {
-                group.addTask { [self] in await (id, self.fetchStop(id: id))}
+                group.addTask { [self] in await (id, self.fetchStop(id: id)) }
             }
             return await group.reduce(into: [:]) { $0[$1.0] = $1.1 }
         })
-        
+
         var stopsAPI: [Int: StopAPI] = [:]
         for id in ids {
             switch results[id] {
@@ -71,7 +74,7 @@ internal final class APIManager: APIManagerProtocol {
     }
 
     // MARK: - Private/Internal functions
-    fileprivate func fetchAsync<T: Codable>(url: URL) async -> Result<T , ErrorAPI> {
+    fileprivate func fetchAsync<T: Codable>(url: URL) async -> Result<T, ErrorAPI> {
 
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
@@ -90,14 +93,14 @@ internal final class APIManager: APIManagerProtocol {
             return .failure(ErrorAPI.errorResponse(error))
         }
     }
-    
+
     private func dateDecodingStrategy() -> JSONDecoder.DateDecodingStrategy {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         return .formatted(dateFormatter)
     }
-    
-    private func createURLFromParameters(parameters: [String: Any], pathparam: String?) -> URL {
+
+    private func createURLFromParameters(parameters: [String: Any], pathparam: String?) -> URL? {
 
         var components = URLComponents()
         components.scheme = apiScheme
@@ -110,10 +113,11 @@ internal final class APIManager: APIManagerProtocol {
             components.queryItems = [URLQueryItem]()
             for (key, value) in parameters {
                 let queryItem = URLQueryItem(name: key, value: "\(value)")
-                components.queryItems!.append(queryItem)
+                guard var queryItems = components.queryItems else { return nil }
+                queryItems.append(queryItem)
             }
         }
 
-        return components.url!
+        return components.url
     }
 }

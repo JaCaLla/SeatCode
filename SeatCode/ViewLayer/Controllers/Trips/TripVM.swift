@@ -35,8 +35,7 @@ struct TripVM {
             stopPinAnnotation.title = trip.driverName
             if let first = trip.stopPoints.first, first == $0 {
                 stopPinAnnotation.subtitle = R.string.localizable.trips_origin.key.localized
-            } else if let identifier = $0.id,
-                        let stop = $0.stop {
+            } else if let stop = $0.stop {
                 stopPinAnnotation.title = stop.userName
                 stopPinAnnotation.subtitle = stop.address
             } else {
@@ -51,7 +50,8 @@ struct TripVM {
         let polyline = Polyline(encodedPolyline: trip.route)
         if let decodedLocations = polyline.locations {
             polylinePoints = decodedLocations.map { CLLocationCoordinate2D(latitude: $0.coordinate.latitude,
-                                                                           longitude: $0.coordinate.longitude) }
+                                                                           longitude: $0.coordinate.longitude)
+            }
         }
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 import RealmSwift
 
-
 protocol Resetable: AnyObject {
     func reset()
 }
@@ -20,8 +19,6 @@ protocol DBManagerProtocol: Resetable {
     func getIssue(endTime: String) -> IssueDB?
     func reset()
 }
-
-
 
 // MARK: - Resetable
 class DBManager {
@@ -69,20 +66,18 @@ extension DBManager: DBManagerProtocol {
     func getIssue(endTime: String) -> IssueDB? {
 
         self.resetHandlerIfNecessary()
-        guard let uwpFoundMachine = realm.objects(IssueDB.self).filter("endTime = %@", endTime).first else {
+        guard let found = realm.objects(IssueDB.self).filter("endTime = %@", endTime).first else {
             return nil
         }
-
-        return uwpFoundMachine
+        return found
     }
 
     func getIssue(endTime: String) async -> IssueDB? {
         self.resetHandlerIfNecessary()
-        guard let uwpFoundMachine = realm.objects(IssueDB.self).filter("endTime = %@", endTime).first else {
+        guard let found = realm.objects(IssueDB.self).filter("endTime = %@", endTime).first else {
             return nil
         }
-
-        return uwpFoundMachine
+        return found
     }
 
     func reset() {
